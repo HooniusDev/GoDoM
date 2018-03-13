@@ -71,5 +71,7 @@ collision_mask = 1
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.599094, 0 )
 _sections_unfolded = [ "Transform" ]
+barrel_full_rotation_speed = 1
+spooling_delay = 1.8
 
 

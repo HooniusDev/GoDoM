@@ -9,9 +9,8 @@
 [node name="Minigun" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-barrel_full_rotation_speed = 2
-fire_rate = 0.05
-spooling_delay = 2
+barrel_full_rotation_speed = 1
+spooling_delay = 1.8
 
 [node name="ArmatureMinigun" parent="." index="0"]
 
