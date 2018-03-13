@@ -25,6 +25,7 @@ var shoot_loop_start = 1.8
 var shoot_loop_end = 5.6
 
 var damage = 2
+var spread = 2
 
 # Spool variables. Time it takes to minigun to start firing bullets
 var spool = 0
@@ -47,23 +48,7 @@ func _process_shoot(delta):
 # Called from AnimationPlayer
 func on_shot_fired():
 	if state != SPOOL_UP:
-		print("shot fired")
-
-	#create and send bullet case to world
-#	var instance = bullet.instance()
-#	get_tree().get_root().get_node("World").add_child(instance)
-#	instance.global_transform = ejector.global_transform
-#	instance.linear_velocity = instance.global_transform.basis.x * 7 + get_node("../../..").velocity
-
-#	shoot_ray.force_raycast_update()
-#	if shoot_ray.is_colliding():
-#		var object = shoot_ray.get_collider().get_parent()
-#		if object.has_method("take_damage"):
-#			object.take_damage(damage)
-#		var normal = shoot_ray.get_collision_normal()
-#		var point = shoot_ray.get_collision_point()
-#		var hit = bullet_hit.instance()
-#		get_tree().get_root().get_node("World").spawn_weapon_hit( point, normal, bullet_hit )
+		shoot_ray.shoot(damage, spread)
 
 # Spool Up state
 func _process_spool_up(delta):
@@ -109,7 +94,7 @@ func set_state(new_state):
 		shoot_sound.play()
 	elif new_state == STATES.SHOOT:
 		#anim.play("minigun_shoot")
-		anim.playback_speed = 1
+		anim.playback_speed = 3
 		flash.show()
 		shoot_sound.play(shoot_loop_start)
 	elif new_state == STATES.SPOOL_DOWN:
@@ -117,7 +102,8 @@ func set_state(new_state):
 		flash.hide()
 		shoot_sound.play(6)
 	elif new_state == STATES.IDLE:
-		pass
+		print("idle")
+		set_process(true)
 	elif new_state == STATES.DE_EQUIP:
 		if state == SHOOT:
 			shoot_sound.play(6)
@@ -153,7 +139,7 @@ func _process(delta):
 
 func _ready():
 	equip()
-	# set_process(false)
+	#set_process(false)
 	anim.connect("animation_finished",self, "on_anim_finished")
 
 
