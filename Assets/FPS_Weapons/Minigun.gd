@@ -10,7 +10,7 @@ onready var shoot_ray = $"../ShootRay"
 onready var flash = $ArmatureMinigun/Muzzle
 
 # Scene preloads
-#var bullet = preload("res://Assets/Weapons/Bullets/MinigunBullet.tscn")
+var bullet = preload("res://Scenes/Misc/BulletCaseMinigun.tscn")
 #var bullet_hit = preload("res://Scenes/Particles/minigun_impact.tscn")
 
 # State Machine
@@ -49,6 +49,12 @@ func _process_shoot(delta):
 func on_shot_fired():
 	if state != SPOOL_UP:
 		shoot_ray.shoot(damage, spread)
+		#create and send bullet case to world
+		var instance = bullet.instance()
+		get_tree().get_root().get_node("World").add_child(instance)
+		instance.global_transform = ejector.global_transform
+		instance.linear_velocity = instance.global_transform.basis.x * 7 + get_node("../../..").velocity
+
 
 # Spool Up state
 func _process_spool_up(delta):

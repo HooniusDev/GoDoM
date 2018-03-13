@@ -16,6 +16,10 @@ spooling_delay = 1.8
 
 transform = Transform( -1, -1.74846e-07, -3.89414e-07, -1.74846e-07, 1, 3.38813e-21, 3.89414e-07, 6.80874e-14, -1, 0, 0, 0 )
 
+[node name="Minigun" parent="ArmatureMinigun/Skeleton" index="0"]
+
+layers = 2
+
 [node name="Muzzle" type="Position3D" parent="ArmatureMinigun" index="1"]
 
 transform = Transform( 1, 2.65142e-20, 0, 2.65142e-20, 1, 0, 0, 0, 1, 0.230785, -0.0873554, -1.75431 )
@@ -40,7 +44,7 @@ shadow_contact = 0.0
 shadow_reverse_cull_face = false
 editor_only = false
 omni_range = 1.4
-omni_attenuation = 0.258816
+omni_attenuation = 1.03526
 omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light", "Omni", "Visibility" ]
