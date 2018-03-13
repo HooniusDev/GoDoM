@@ -7,7 +7,7 @@ path="res://.import/items.dae-97db2b896c7a7c11cb0a6f7b6ff4a4a8.scn"
 [deps]
 
 source_file="res://Assets/PropMeshes/items.dae"
-source_md5="90bacd87dfe07ff3284879007aed57f2"
+source_md5="3575f939229459a77d943e670d9fda20"
 
 dest_files=[ "res://.import/items.dae-97db2b896c7a7c11cb0a6f7b6ff4a4a8.scn" ]
 dest_md5="3330629abe601a88064b4ae3bfbf9268"

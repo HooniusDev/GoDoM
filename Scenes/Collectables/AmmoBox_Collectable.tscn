@@ -7,7 +7,7 @@
 
 extents = Vector3( 0.391823, 0.177355, 0.14644 )
 
-[node name="AmmoBox" type="Area" index="0"]
+[node name="AmmoBox" type="Area"]
 
 input_ray_pickable = true
 input_capture_on_drag = false

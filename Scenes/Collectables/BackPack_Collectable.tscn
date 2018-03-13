@@ -7,7 +7,7 @@
 
 extents = Vector3( 0.361511, 0.421805, 0.185887 )
 
-[node name="BackPack" type="Area" index="0"]
+[node name="BackPack" type="Area"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -31,8 +31,8 @@ reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-type = null
-amount = 100
+type = 3
+amount = 1
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 

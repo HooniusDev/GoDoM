@@ -7,7 +7,7 @@ path="res://.import/minigun.dae-d10afaae8c3d30c6967b02d381aa151f.scn"
 [deps]
 
 source_file="res://Assets/FPS_Weapons/minigun.dae"
-source_md5="dacf4dfcab03eeba347b66d52685bc0c"
+source_md5="f0c4d81ddbb34c71a5694414cb1a24e7"
 
 dest_files=[ "res://.import/minigun.dae-d10afaae8c3d30c6967b02d381aa151f.scn" ]
 dest_md5="fda698727cd4407c5bda561c2edbedcb"
