@@ -7,7 +7,7 @@ path="res://.import/shotgun.dae-cda5118ffe86f517ac8858f735a0821e.scn"
 [deps]
 
 source_file="res://Assets/FPS_Weapons/shotgun.dae"
-source_md5="513cc43ac3cf418865da1bc13c6f4878"
+source_md5="0277202884efebf4f9826ebefd9742ec"
 
 dest_files=[ "res://.import/shotgun.dae-cda5118ffe86f517ac8858f735a0821e.scn" ]
 dest_md5="f4e675ad1d25c8dc114c73641c214cf4"
