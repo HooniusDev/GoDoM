@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gun-sound-4.wav-3cbc8bb5eeb0a8da0f78aac4e46f5966.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Bullets/gun-sound-4.wav"
+source_md5="12c7b850e8dfe70357c5b4549f71f02e"
+
+dest_files=[ "res://.import/gun-sound-4.wav-3cbc8bb5eeb0a8da0f78aac4e46f5966.sample" ]
+dest_md5="f4c71ad7dd813e2129d621a84ff5c001"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -100,7 +100,7 @@ func set_state(new_state):
 		shoot_sound.play()
 	elif new_state == STATES.SHOOT:
 		#anim.play("minigun_shoot")
-		anim.playback_speed = 3
+		anim.playback_speed = 4
 		flash.show()
 		shoot_sound.play(shoot_loop_start)
 	elif new_state == STATES.SPOOL_DOWN:
@@ -144,8 +144,7 @@ func _process(delta):
 		_process_shoot(delta)
 
 func _ready():
-	equip()
-	#set_process(false)
+	set_state(NONE)
 	anim.connect("animation_finished",self, "on_anim_finished")
 
 

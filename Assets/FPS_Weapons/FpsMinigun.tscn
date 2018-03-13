@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/FPS_Weapons/Anim/minigun_shoot.tres" type="Animation" id=4]
 [ext_resource path="res://Assets/Sounds/Effects/Weapons/minigun-spool-firing.wav" type="AudioStream" id=5]
 
-[node name="Minigun" index="0" instance=ExtResource( 1 )]
+[node name="Minigun" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 barrel_full_rotation_speed = 1

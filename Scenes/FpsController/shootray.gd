@@ -2,18 +2,16 @@ extends RayCast
 
 var original_orientation
 
-var particle = preload("res://Scenes/Particles/BaseParticle.tscn")
+var particle_small = preload("res://Scenes/Particles/BulletHitMetalSmall.tscn")
+var particle_large = preload("res://Scenes/Particles/BulletHitMetalLarge.tscn")
 
 func _ready():
 	original_orientation = transform.basis
 
 func shoot( damage, spread ):
-	print("shooting ray")
 
 	var x = lerp(-spread,spread, randf())
 	var y = lerp(-spread,spread, randf())
-
-	print ( "rotation: " + str(x) + ", " + str(y) )
 
 	rotate_x( deg2rad(x))
 	rotate_y( deg2rad(y))
@@ -21,14 +19,16 @@ func shoot( damage, spread ):
 	force_raycast_update()
 
 	if is_colliding():
-		print("collided")
 		var object = get_collider().get_parent()
 		if object.has_method("take_damage"):
 			object.take_damage(damage)
 		var normal = get_collision_normal()
 		var point = get_collision_point()
-
-		var hit = particle.instance()
+		var hit
+		if damage > 3:
+			hit = particle_large.instance()
+		else:
+			hit = particle_small.instance()
 		get_tree().get_root().get_node("World").add_child(hit)
 
 		hit.global_transform.origin = point

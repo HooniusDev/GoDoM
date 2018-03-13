@@ -5,10 +5,12 @@ onready var camera = $Head/Camera
 onready var minigun = $Head/Camera/Minigun
 onready var shotgun = $Head/Camera/Shotgun
 
+#camera variables
 var camera_angle = 0
 var mouse_sensitivity = 0.3
 var camera_change = Vector2()
 
+#movement variables
 var velocity = Vector3()
 var direction = Vector3()
 
@@ -31,8 +33,7 @@ var has_contact = false
 const MAX_SLOPE_ANGLE = 45
 
 func _ready():
-	print("Player here.")
-	#PlayerInfo.player = self
+	Player.player = self
 
 func _physics_process(delta):
 	aim()
@@ -100,8 +101,6 @@ func walk(delta):
 	# move
 	velocity = move_and_slide(velocity, Vector3(0,1,0))
 
-
-
 func fly(delta):
 		# reset direction of player
 	direction = Vector3()
@@ -131,7 +130,6 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		camera_change = event.relative
 
-
 func aim():
 	if camera_change.length() > 0:
 		$Head.rotate_y(deg2rad(-camera_change.x * mouse_sensitivity))
@@ -142,8 +140,7 @@ func aim():
 			camera_angle += change
 		camera_change = Vector2()
 
-#	if event is InputEventAction:
-#
+
 
 
 

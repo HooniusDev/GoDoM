@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/FpsController/FpsController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Images/CrossHairs/crosshair.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Collectables/AmmoBox_Collectable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Collectables/BackPack_Collectable.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Collectables/collectable.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Collectables/HealthKit_Collectable.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Collectables/MiniGun_Collectable.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Collectables/ShellBox_Collectable.tscn" type="PackedScene" id=9]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 5, 5, 1 )
 
@@ -65,7 +71,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.11754, -10.0643 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
 
 [node name="MeshInstance2" type="MeshInstance" parent="StaticBody" index="1"]
@@ -101,7 +107,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.11754, -10.0643 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
 
 [node name="MeshInstance2" type="MeshInstance" parent="StaticBody2" index="1"]
@@ -162,5 +168,121 @@ size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Grow Direction", "Margin", "Rect" ]
+
+[node name="AmmoBox" parent="." index="5" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.64538, -0.11984, 1.09437 )
+
+[node name="BackPack" type="Area" parent="." index="6" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.64234, -0.0535856, 2.60845 )
+input_ray_pickable = true
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision" ]
+type = null
+amount = 100
+
+[node name="HealthKit" type="Area" parent="." index="7" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99365, -0.110587, 3.63848 )
+input_ray_pickable = true
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision" ]
+type = null
+amount = 100
+
+[node name="MiniGun_Collect" type="Area" parent="." index="8" instance=ExtResource( 8 )]
+
+transform = Transform( -0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -0.205342, 0.0291941, 3.882 )
+input_ray_pickable = true
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision" ]
+type = null
+amount = 100
+
+[node name="ShellBox" type="Area" parent="." index="9" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62046, 0.205585, 4.36227 )
+input_ray_pickable = true
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision" ]
+type = null
+amount = 100
 
 

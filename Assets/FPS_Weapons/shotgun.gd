@@ -52,13 +52,11 @@ func on_anim_finished( anim_name ):
 		print("equipped and idling")
 		set_state(IDLE)
 	if anim_name == "shotgun_equip" and state == DE_EQUIP:
-		disable()
+		set_state(NONE)
 
 func fire():
 	for i in range(pellets):
 		shoot_ray.shoot( damage, spread )
-
-
 
 # Function to equip
 func equip():
@@ -70,8 +68,7 @@ func de_equip():
 
 
 func _ready():
-	#equip() ## Debug!
-	set_process(false) ## Debug!
+	set_state(NONE)
 	anim.connect("animation_finished",self, "on_anim_finished")
 
 func _process(delta):

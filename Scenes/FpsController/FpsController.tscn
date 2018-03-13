@@ -10,7 +10,9 @@
 radius = 0.4
 height = 1.4
 
-[node name="FpsController" type="KinematicBody"]
+[node name="FpsController" type="KinematicBody" groups=[
+"Player",
+]]
 
 input_ray_pickable = false
 input_capture_on_drag = false

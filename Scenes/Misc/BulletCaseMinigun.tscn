@@ -5,7 +5,7 @@
 
 [sub_resource type="BoxShape" id=1]
 
-extents = Vector3( 0.1, 0.1, 0.2 )
+extents = Vector3( 0.07, 0.07, 0.2 )
 
 [sub_resource type="SpatialMaterial" id=2]
 
@@ -62,19 +62,19 @@ _sections_unfolded = [ "Albedo" ]
 [sub_resource type="CubeMesh" id=3]
 
 material = SubResource( 2 )
-size = Vector3( 0.2, 0.2, 0.4 )
+size = Vector3( 0.14, 0.14, 0.4 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="BulletCase" type="RigidBody"]
+[node name="BulletCase" type="RigidBody" index="0"]
 
-input_ray_pickable = true
+input_ray_pickable = false
 input_capture_on_drag = false
 collision_layer = 0
 collision_mask = 1
 mode = 0
-mass = 1.0
+mass = 0.408163
 friction = 1.0
 bounce = 0.0
 gravity_scale = 1.0
