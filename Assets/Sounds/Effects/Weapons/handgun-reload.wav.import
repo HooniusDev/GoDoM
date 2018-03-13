@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/handgun-reload.wav-6a9d15db9740be5e5f36ab879a5f7f37.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Weapons/handgun-reload.wav"
+source_md5="e07d6bf3f60aa29ff58dde54594a0297"
+
+dest_files=[ "res://.import/handgun-reload.wav-6a9d15db9740be5e5f36ab879a5f7f37.sample" ]
+dest_md5="d9f6aae70f83973f2c8a1e29f64bd116"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

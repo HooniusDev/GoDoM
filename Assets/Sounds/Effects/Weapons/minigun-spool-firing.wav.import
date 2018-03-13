@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/minigun-spool-firing.wav-522dceb3131a64ff12b17c9ec3d8c9a8.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Weapons/minigun-spool-firing.wav"
+source_md5="0e1112bcad293cce9b1a134b40cdbd1e"
+
+dest_files=[ "res://.import/minigun-spool-firing.wav-522dceb3131a64ff12b17c9ec3d8c9a8.sample" ]
+dest_md5="61f59f8830b88133144a736a636f3333"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

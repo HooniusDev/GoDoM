@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shotgun-shoot.wav-490e42e82a92ab6c2bfc584878dc51cf.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Weapons/shotgun-shoot.wav"
+source_md5="f7fb997ffe02e5b81bf784c245ae8388"
+
+dest_files=[ "res://.import/shotgun-shoot.wav-490e42e82a92ab6c2bfc584878dc51cf.sample" ]
+dest_md5="64a020d05fe34afd718a321975a1639d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

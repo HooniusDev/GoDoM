@@ -1,0 +1,118 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "shoot-loop"
+length = 0.43
+loop = true
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("ArmatureMinigun")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, -8.74228e-08, 1, 1.70218e-14, -1.94707e-07, 1, 1, 1, 0.4, 1, 0, 0, 0, -8.74228e-08, 1, 1.70218e-14, -1.94707e-07, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("ArmatureMinigun/Skeleton:minigun")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 2.5411e-21, 0, -4.03897e-28, 1, 1, 1, 1, 0.416667, 1, 0, 0, 0, 2.5411e-21, 0, -4.03897e-28, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("ArmatureMinigun/Skeleton:muzzle")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, -2.98023e-08, 0, 2.38419e-07, 5.82077e-11, 0, 7.27596e-12, 1, 1, 1, 1, 0.416667, 1, -2.98023e-08, 0, 2.38419e-07, 5.82077e-11, 0, 7.27596e-12, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("ArmatureMinigun/Skeleton:barrel")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, -1.49012e-08, 0, -3.55271e-15, -5.32907e-15, -4.23516e-22, 1, 1, 1, 1, 0.2, 1, 0, -1.49012e-08, 0, -8.89935e-15, 7.11948e-15, 0.998027, -0.0627903, 1, 1, 1, 0.416667, 1, 0, -1.49012e-08, 0, 0, -4.44089e-15, -8.74228e-08, 1, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("ArmatureMinigun/Skeleton:magazine")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0, 5.96046e-08, 2.98023e-08, 1.77636e-15, -3.67098e-15, 8.88178e-15, 1, 1, 1, 1, 0.416667, 1, 0, 5.96046e-08, 2.98023e-08, 1.77636e-15, -3.67098e-15, 8.88178e-15, 1, 1, 1, 1 )
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_shot_fired"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ArmatureMinigun/Muzzle/Light:light_energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.1, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ArmatureMinigun/Muzzle/Light:light_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.993896, 0.902344, 1 ), Color( 0.835938, 0.809202, 0.408173, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("ArmatureMinigun/Muzzle/Sprite:pixel_size")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.02, 0.0304, 0.02 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("ArmatureMinigun/Muzzle/Sprite:opacity")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.4, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("ArmatureMinigun/Muzzle/Sprite:flip_v")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+

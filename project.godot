@@ -11,6 +11,7 @@ config_version=3
 [application]
 
 config/name="GoDoM"
+run/main_scene="res://Scenes/HooBase1.tscn"
 config/icon="res://icon.png"
 
 [importer_defaults]
@@ -33,6 +34,11 @@ texture={
 "stream": false,
 "svg/scale": 1.0
 }
+
+[input]
+
+fire0=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
 
 [rendering]
 
