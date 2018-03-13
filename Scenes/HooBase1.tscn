@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/FpsController/FpsController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Images/CrossHairs/crosshair.png" type="Texture" id=3]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 5, 5, 1 )
 
@@ -15,7 +15,7 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -65,7 +65,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.11754, -10.0643 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
 
 [node name="MeshInstance2" type="MeshInstance" parent="StaticBody" index="1"]
@@ -101,7 +101,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.11754, -10.0643 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
 
 [node name="MeshInstance2" type="MeshInstance" parent="StaticBody2" index="1"]

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2018-03-13T14:08:35Z</created>
+	<modified>2018-03-13T14:08:35Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_images>
+	<image id="id-image-3" name="MetalPlain1_Diffuse.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalplain1/MetalPlain1_Diffuse.png</init_from>
+	</image>
+	<image id="id-image-6" name="MetalPlain1_Normal.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalplain1/MetalPlain1_Normal.png</init_from>
+	</image>
+	<image id="id-image-9" name="MetalPlain1_Roughness.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalplain1/MetalPlain1_Roughness.png</init_from>
+	</image>
+	<image id="id-image-14" name="MetalWall2_Diffuse.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalwall2/MetalWall2_Diffuse.png</init_from>
+	</image>
+	<image id="id-image-17" name="MetalWall2_Normal.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalwall2/MetalWall2_Normal.png</init_from>
+	</image>
+	<image id="id-image-20" name="MetalWall2_Roughness.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalwall2/MetalWall2_Roughness.png</init_from>
+	</image>
+	<image id="id-image-23" name="MetalWall2_Emission.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/metal/metalwall2/MetalWall2_Emission.png</init_from>
+	</image>
+	<image id="id-image-28" name="128grid.png">
+		<init_from>../../../../../../../Desktop/hoobase/textures/dev/128grid.png</init_from>
+	</image>
+</library_images>
+<library_effects>
+	<effect id="id-fx-2" name="MetalPlain1-fx">
+		<profile_COMMON>
+			<newparam sid="id-fx_surf-4">
+				<surface type="2D">
+					<init_from>id-image-3</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-5">
+				<sampler2D>
+					<source>id-fx_surf-4</source>
+				</sampler2D>
+			</newparam>
+			<newparam sid="id-fx_surf-7">
+				<surface type="2D">
+					<init_from>id-image-6</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-8">
+				<sampler2D>
+					<source>id-fx_surf-7</source>
+				</sampler2D>
+			</newparam>
+			<newparam sid="id-fx_surf-10">
+				<surface type="2D">
+					<init_from>id-image-9</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-11">
+				<sampler2D>
+					<source>id-fx_surf-10</source>
+				</sampler2D>
+			</newparam>
+			<technique sid="common">
+				<blinn>
+					<emission>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</emission>
+					<ambient>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</ambient>
+					<diffuse>
+						<texture texture="id-fx_sampler-5" texcoord="CHANNEL1"/>
+					</diffuse>
+					<specular>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</specular>
+					<shininess>
+						<float>50</float>
+					</shininess>
+					<reflective>
+						<color>  1.0 1.0 1.0 1.0 </color>
+					</reflective>
+					<index_of_refraction>
+						<float>4.0</float>
+					</index_of_refraction>
+				</blinn>
+				<extra>
+					<technique profile="FCOLLADA">
+						<bump bumptype="NORMALMAP">
+							<texture texture="id-fx_sampler-8" texcoord="CHANNEL1"/>
+						</bump>
+					</technique>
+					<technique profile="GOOGLEEARTH">
+						<double_sided>0</double_sided>
+					</technique>
+				</extra>
+			</technique>
+		</profile_COMMON>
+	</effect>
+	<effect id="id-fx-13" name="MetalWall2-fx">
+		<profile_COMMON>
+			<newparam sid="id-fx_surf-15">
+				<surface type="2D">
+					<init_from>id-image-14</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-16">
+				<sampler2D>
+					<source>id-fx_surf-15</source>
+				</sampler2D>
+			</newparam>
+			<newparam sid="id-fx_surf-18">
+				<surface type="2D">
+					<init_from>id-image-17</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-19">
+				<sampler2D>
+					<source>id-fx_surf-18</source>
+				</sampler2D>
+			</newparam>
+			<newparam sid="id-fx_surf-21">
+				<surface type="2D">
+					<init_from>id-image-20</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-22">
+				<sampler2D>
+					<source>id-fx_surf-21</source>
+				</sampler2D>
+			</newparam>
+			<newparam sid="id-fx_surf-24">
+				<surface type="2D">
+					<init_from>id-image-23</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-25">
+				<sampler2D>
+					<source>id-fx_surf-24</source>
+				</sampler2D>
+			</newparam>
+			<technique sid="common">
+				<blinn>
+					<emission>
+						<texture texture="id-fx_sampler-25" texcoord="CHANNEL1"/>
+					</emission>
+					<ambient>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</ambient>
+					<diffuse>
+						<texture texture="id-fx_sampler-16" texcoord="CHANNEL1"/>
+					</diffuse>
+					<specular>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</specular>
+					<shininess>
+						<float>50</float>
+					</shininess>
+					<reflective>
+						<color>  1.0 1.0 1.0 1.0 </color>
+					</reflective>
+					<index_of_refraction>
+						<float>4.0</float>
+					</index_of_refraction>
+				</blinn>
+				<extra>
+					<technique profile="FCOLLADA">
+						<bump bumptype="NORMALMAP">
+							<texture texture="id-fx_sampler-19" texcoord="CHANNEL1"/>
+						</bump>
+					</technique>
+					<technique profile="GOOGLEEARTH">
+						<double_sided>0</double_sided>
+					</technique>
+				</extra>
+			</technique>
+		</profile_COMMON>
+	</effect>
+	<effect id="id-fx-27" name="DevPanel-fx">
+		<profile_COMMON>
+			<newparam sid="id-fx_surf-29">
+				<surface type="2D">
+					<init_from>id-image-28</init_from>
+					<format>A8R8G8B8</format>
+				</surface>
+			</newparam>
+			<newparam sid="id-fx_sampler-30">
+				<sampler2D>
+					<source>id-fx_surf-29</source>
+				</sampler2D>
+			</newparam>
+			<technique sid="common">
+				<blinn>
+					<emission>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</emission>
+					<ambient>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</ambient>
+					<diffuse>
+						<texture texture="id-fx_sampler-30" texcoord="CHANNEL1"/>
+					</diffuse>
+					<specular>
+						<color>  0.0 0.0 0.0 1.0 </color>
+					</specular>
+					<shininess>
+						<float>50</float>
+					</shininess>
+					<reflective>
+						<color>  1.0 1.0 1.0 1.0 </color>
+					</reflective>
+					<index_of_refraction>
+						<float>4.0</float>
+					</index_of_refraction>
+				</blinn>
+				<extra>
+					<technique profile="FCOLLADA">
+					</technique>
+					<technique profile="GOOGLEEARTH">
+						<double_sided>0</double_sided>
+					</technique>
+				</extra>
+			</technique>
+		</profile_COMMON>
+	</effect>
+</library_effects>
+<library_materials>
+	<material id="id-material-12" name="MetalPlain1">
+		<instance_effect url="#id-fx-2"/>
+	</material>
+	<material id="id-material-26" name="MetalWall2">
+		<instance_effect url="#id-fx-13"/>
+	</material>
+	<material id="id-material-31" name="DevPanel">
+		<instance_effect url="#id-fx-27"/>
+	</material>
+</library_materials>
+<library_geometries>
+	<geometry id="id-mesh-32" name="Cube.005">
+		<mesh>
+			<source id="id-mesh-32-positions">
+				<float_array id="id-mesh-32-positions-array" count="150"> 19.10285758972168 8.800000190734863 -1.0 16.600000381469727 18.700000762939453 -1.0 14.10285758972168 8.800000190734863 -1.0 15.800000190734863 18.700000762939453 -0.800000011920929 14.10285758972168 8.800000190734863 -1.0 16.600000381469727 18.700000762939453 -1.0 15.800000190734863 18.700000762939453 -0.800000011920929 13.302857398986816 8.800000190734863 0.0 13.302857398986816 8.800000190734863 -0.800000011920929 19.10285758972168 8.800000190734863 -1.0 21.600000381469727 18.700000762939453 2.0 21.600000381469727 18.700000762939453 -1.0 15.800000190734863 18.700000762939453 0.0 15.002857208251953 8.800000190734863 2.0 13.302857398986816 8.800000190734863 0.0 13.302857398986816 8.800000190734863 -0.800000011920929 14.10285758972168 8.800000190734863 0.0 14.10285758972168 8.800000190734863 -1.0 13.302857398986816 8.800000190734863 0.0 15.002857208251953 8.800000190734863 2.0 14.10285758972168 8.800000190734863 0.0 19.10285758972168 8.800000190734863 2.0 17.5 18.700000762939453 2.0 21.600000381469727 18.700000762939453 2.0 15.800000190734863 18.700000762939453 0.0 16.600000381469727 18.700000762939453 -1.0 17.5 18.700000762939453 2.0 21.600000381469727 18.700000762939453 -1.0 21.600000381469727 18.700000762939453 2.0 21.600000381469727 18.700000762939453 -1.0 15.800000190734863 18.700000762939453 -0.800000011920929 13.302857398986816 8.800000190734863 -0.800000011920929 14.10285758972168 8.800000190734863 -1.0 15.800000190734863 18.700000762939453 -0.800000011920929 15.800000190734863 18.700000762939453 0.0 13.302857398986816 8.800000190734863 0.0 19.10285758972168 8.800000190734863 2.0 15.800000190734863 18.700000762939453 0.0 17.5 18.700000762939453 2.0 15.002857208251953 8.800000190734863 2.0 13.302857398986816 8.800000190734863 -0.800000011920929 13.302857398986816 8.800000190734863 0.0 14.10285758972168 8.800000190734863 0.0 19.10285758972168 8.800000190734863 2.0 15.002857208251953 8.800000190734863 2.0 17.5 18.700000762939453 2.0 15.800000190734863 18.700000762939453 -0.800000011920929 17.5 18.700000762939453 2.0 16.600000381469727 18.700000762939453 -1.0 21.600000381469727 18.700000762939453 -1.0</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-32-positions-array" count="50" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-32-normals">
+				<float_array id="id-mesh-32-normals-array" count="150"> 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.24208305776119232 -0.061062198132276535 0.9683322310447693 0.24208305776119232 -0.061062198132276535 0.9683322310447693 0.24208305776119232 -0.061062198132276535 0.9683322310447693 0.9696300625801086 -0.2445760816335678 0.0 0.9696300625801086 -0.2445760816335678 0.0 0.9696300625801086 -0.2445760816335678 0.0 -0.9696300625801086 0.2445763498544693 0.0 -0.9696300625801086 0.2445763498544693 0.0 -0.9696300625801086 0.2445763498544693 0.0 0.748245894908905 -0.1887350231409073 -0.6360087394714355 0.748245894908905 -0.1887350231409073 -0.6360087394714355 0.748245894908905 -0.1887350231409073 -0.6360087394714355 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 -5.960455951026233e-07 0.0 1.0 -5.960455951026233e-07 0.0 1.0 -5.960455951026233e-07 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 -1.0 0.0 0.0 0.0 1.0 0.242082878947258 -0.06106218323111534 0.9683322310447693 0.242082878947258 -0.06106218323111534 0.9683322310447693 0.242082878947258 -0.06106218323111534 0.9683322310447693 0.9696300625801086 -0.24457630515098572 0.0 0.9696300625801086 -0.24457630515098572 0.0 0.9696300625801086 -0.24457630515098572 0.0 -0.9696300625801086 0.2445763498544693 0.0 0.7482457160949707 -0.1887349784374237 -0.6360089182853699 0.7482457160949707 -0.1887349784374237 -0.6360089182853699 0.7482457160949707 -0.1887349784374237 -0.6360089182853699 0.0 0.9999999403953552 0.0 0.0 0.9999999403953552 0.0 0.0 0.9999999403953552 0.0 0.0 0.0 -0.9999999403953552 0.0 0.0 -0.9999999403953552 0.0 0.0 -0.9999999403953552 0.0 -1.0 0.0 0.0 -1.0 1.0172526572205243e-06 0.0 -1.0 1.0172526572205243e-06 0.0 -1.0 1.0172526572205243e-06</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-32-normals-array" count="50" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-32-texcoord-0">
+				<float_array id="id-mesh-32-texcoord-0-array" count="100"> 1.0 0.0 0.13671875 3.0 0.13671875 0.0 3.0 1.0 0.0 0.8671875 3.0 0.8671875 2.98828125 0.0 0.01171875 0.25 0.01171875 0.0 1.0 0.25 -2.0 1.0 -2.0 0.25 2.98828125 0.25 0.01171875 0.75 0.01171875 0.25 -6.575714111328125 -0.25 -6.77571439743042 0.0 -6.77571439743042 -0.25 -6.575714111328125 0.0 -7.000714302062988 0.5 -6.77571439743042 0.0 0.0 0.0 1.0 3.0 0.0 3.0 7.199999809265137 0.0 7.400000095367432 -0.25 7.625 0.5 8.649999618530273 -0.25 8.649999618530273 0.5 1.0 3.0 3.0 1.0 0.0 1.0 0.0 0.8671875 2.98828125 0.0 2.98828125 0.25 0.01171875 0.25 1.0 1.0 2.98828125 0.25 2.98828125 0.75 0.01171875 0.75 -6.575714111328125 -0.25 -6.575714111328125 0.0 -6.77571439743042 0.0 0.0 0.0 1.0 0.0 1.0 3.0 7.199999809265137 -0.20000000298023224 7.625 0.5 7.400000095367432 -0.25 8.649999618530273 -0.25</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-32-texcoord-0-array" count="50" stride="2">
+					<param name="S" type="float"/>
+					<param name="T" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<vertices id="id-mesh-32-vertices">
+				<input semantic="POSITION" source="#id-mesh-32-positions"/>
+			</vertices>
+			<triangles count="6" material="id-trimat-33">
+				<input semantic="VERTEX" source="#id-mesh-32-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-32-normals" offset="0"/>
+				<input semantic="TEXCOORD" source="#id-mesh-32-texcoord-0" offset="0" set="0"/>
+				<p> 21 22 23 24 25 26 26 27 28 43 44 45 24 46 25 47 48 49 </p>
+			</triangles>
+			<triangles count="11" material="id-trimat-34">
+				<input semantic="VERTEX" source="#id-mesh-32-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-32-normals" offset="0"/>
+				<input semantic="TEXCOORD" source="#id-mesh-32-texcoord-0" offset="0" set="0"/>
+				<p> 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 30 31 32 33 34 35 9 36 10 37 38 39 40 41 42 </p>
+			</triangles>
+			<triangles count="2" material="id-trimat-35">
+				<input semantic="VERTEX" source="#id-mesh-32-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-32-normals" offset="0"/>
+				<input semantic="TEXCOORD" source="#id-mesh-32-texcoord-0" offset="0" set="0"/>
+				<p> 0 1 2 0 29 1 </p>
+			</triangles>
+		</mesh>
+	</geometry>
+</library_geometries>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Room001-col" name="Room001-col" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 13.0 0.0 1.0 0.0 -27.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-mesh-32">
+				<bind_material>
+					<technique_common>
+						<instance_material symbol="id-trimat-33" target="#id-material-31"/>
+						<instance_material symbol="id-trimat-34" target="#id-material-26"/>
+						<instance_material symbol="id-trimat-35" target="#id-material-12"/>
+					</technique_common>
+				</bind_material>
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>

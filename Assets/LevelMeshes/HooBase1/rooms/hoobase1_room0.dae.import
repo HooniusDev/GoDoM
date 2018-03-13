@@ -2,20 +2,20 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/minigun.dae-d10afaae8c3d30c6967b02d381aa151f.scn"
+path="res://.import/hoobase1_room0.dae-eeabbe617eeca01a44c0e37eec7b6ef5.scn"
 
 [deps]
 
-source_file="res://Assets/FPS_Weapons/minigun.dae"
-source_md5="dacf4dfcab03eeba347b66d52685bc0c"
+source_file="res://Assets/LevelMeshes/HooBase1/rooms/hoobase1_room0.dae"
+source_md5="963ef2b300ec5113056c0a5eef1be76f"
 
-dest_files=[ "res://.import/minigun.dae-d10afaae8c3d30c6967b02d381aa151f.scn" ]
-dest_md5="fda698727cd4407c5bda561c2edbedcb"
+dest_files=[ "res://.import/hoobase1_room0.dae-eeabbe617eeca01a44c0e37eec7b6ef5.scn" ]
+dest_md5="6ef5d78e2fd7940a4746bc2d2f71fa98"
 
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="Minigun"
+nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
@@ -25,7 +25,7 @@ materials/keep_on_reimport=true
 meshes/compress=true
 meshes/ensure_tangents=true
 meshes/storage=0
-meshes/light_baking=2
+meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
 external_files/store_in_subdir=false
 animation/import=true
