@@ -1,3 +1,7 @@
+# fps_controller.gd
+# Based from Jeremy Bullock's Youtube tutorial
+# https://www.youtube.com/playlist?list=PLTZoMpB5Z4aD-rCpluXsQjkGYgUGUZNIV
+
 extends KinematicBody
 
 onready var head = $Head

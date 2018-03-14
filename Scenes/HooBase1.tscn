@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Images/CrossHairs/crosshair.png" type="Texture" id=3]
 [ext_resource path="res://Assets/LevelMeshes/HooBase1/hoobase1.tscn" type="PackedScene" id=4]
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
