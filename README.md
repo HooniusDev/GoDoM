@@ -10,9 +10,9 @@ This was created by following a great tutorial by [Jeremy Bullock's](https://git
 ## License
 Stuff in folder LevelMeshes are made by [YeOldeDM](https://github.com/YeOldeDM) and license to them is yet to be determined.
 
-[Minigun sound](https://freesound.org/s/320742/) is licensed under: Attribution Noncommercial License.  
-[Bullet casing drop sound](https://freesound.org/s/179005/) is licensed under: Attribution Noncommercial License.
+[Minigun sound](https://freesound.org/s/320742/) License: [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)
+[Bullet casing drop sound](https://freesound.org/s/179005/) License: [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)
 
-Other sound files are from [FreeSound](https://freesound.org) are licensed under Creative Commons 0 License.
+Other sound files are from [FreeSound](https://freesound.org) License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Rest of this project is licensed under the terms of the [MIT license](LICENSE.md)
