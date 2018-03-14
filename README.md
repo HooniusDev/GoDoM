@@ -8,7 +8,7 @@ This was created by following a great tutorial by [Jeremy Bullock's](https://git
 ##
 
 ## License
-Stuff in folder LevelMeshes are made by YeOldeDM and license to them is yet to be determined.
+Stuff in folder LevelMeshes are made by [YeOldeDM](https://github.com/YeOldeDM) and license to them is yet to be determined.
 
 [Minigun sound](https://freesound.org/s/320742/) is licensed under: Attribution Noncommercial License.  
 [Bullet casing drop sound](https://freesound.org/s/179005/) is licensed under: Attribution Noncommercial License.
