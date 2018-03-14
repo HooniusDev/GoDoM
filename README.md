@@ -1,6 +1,6 @@
 # GoDoM
 
-School project in style of Doom2 and other legendary Fps games. Made in [Godot-Engine](https://www.godotengine.org). There is an accompanying [DevBlog](https://hoonius.gonevis.com) and [YouTube Playlist](https://www.youtube.com/playlist?list=PLAbsf-3i7dsgFlXPxCr9VoqMyaGtnKOzh)
+School project in style of Doom2 and other legendary Fps games. Made with [Godot-Engine](https://www.godotengine.org). There are an accompanying [DevBlog](https://hoonius.gonevis.com) and [YouTube Playlist](https://www.youtube.com/playlist?list=PLAbsf-3i7dsgFlXPxCr9VoqMyaGtnKOzh)
 
 ## FPS Controller
 This was created by following a great tutorial by [Jeremy Bullock's](https://github.com/turtletooth) at [YouTube Tutorial](https://www.youtube.com/watch?v=Etpq-d5af6M&t=3s)
