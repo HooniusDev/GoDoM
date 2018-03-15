@@ -17,7 +17,7 @@ All praise [YeOldeDM](https://github.com/YeOldeDM) for his spectacular work! ( T
 This was created by following a great tutorial by [Jeremy Bullock](https://github.com/turtletooth) at [YouTube Tutorial](https://www.youtube.com/watch?v=Etpq-d5af6M&t=3s)
 
 ## Contributing
-Not seeking any contribution for now as this is for school. Fork as you like and if you happen to create anything cool please let me know.
+Not seeking any contribution for now as this is for school. Fork as you like and if you happen to create anything cool I sure would like to know.
 
 ## License
 Stuff in folder [LevelMeshes](https://github.com/HooniusDev/GoDoM/tree/master/Assets/LevelMeshes/) are made by [YeOldeDM](https://github.com/YeOldeDM) and license to them is yet to be determined.
