@@ -16,7 +16,7 @@ var spread = 5
 
 ### State Machine ###
 enum STATES { NONE, EQUIP, IDLE, SHOOT, RELOADING, DE_EQUIP }
-var state = STATES.NONE setget set_state
+var state setget set_state
 
 func set_state(new_state):
 	if state == new_state:
@@ -42,6 +42,7 @@ func set_state(new_state):
 	elif new_state == STATES.NONE:
 		anim.stop()
 		hide()
+		set_process(false)
 	state = new_state
 
 func on_anim_finished( anim_name ):

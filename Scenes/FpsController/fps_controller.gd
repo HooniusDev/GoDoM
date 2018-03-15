@@ -38,6 +38,7 @@ const MAX_SLOPE_ANGLE = 45
 
 func _ready():
 	Player.player = self
+	set_name("Player")
 
 func _physics_process(delta):
 	aim()

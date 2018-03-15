@@ -1,5 +1,7 @@
 extends Node
 
+var player_scene = preload("res://Scenes/FpsController/FpsController.tscn")
+
 enum ITEM_TYPES { AMMO, HEALTH, SHELL, BACKPACK, MINIGUN, KEY_BLUE, KEY_YELLOW, KEY_RED, SHOTGUN }
 
 enum states { PAUSED, NORMAL, EQUIPPING }
@@ -18,9 +20,17 @@ var minigun_ammo = 0
 
 var current_weapon = null
 
-func on_respawn():
-	current_weapon = null
-	set_current_weapon(player.shotgun)
+func spawn(world, spawn, init_weapons):
+	if init_weapons:
+		player = player_scene.instance()
+	world.add_child(player)
+	player.transform = spawn.transform
+	if init_weapons:
+		has_shotgun = false
+		has_minigun = false
+		shotgun_ammo = 0
+		minigun_ammo = 0
+		current_weapon = null
 
 
 func _process(delta):
@@ -52,11 +62,14 @@ func collect_item(item):
 	elif item.type == HEALTH:
 		print("health receiced")
 	elif item.type == MINIGUN:
-		print("MINIGUN!")
+		print("MINIGUN AND AMMO("+str(item.amount)+")" )
 		has_minigun = true
+		minigun_ammo = item.amount
 		set_current_weapon(player.minigun)
 	elif item.type == SHOTGUN:
-		print("SHOTGUN!")
+		print("SHOTGUN AND AMMO("+str(item.amount)+")" )
+		shotgun_ammo = item.amount
 		has_shotgun = true
-		set_current_weapon(player.shotgun)
+		if current_weapon != player.minigun and current_weapon != player.shotgun:
+			set_current_weapon(player.shotgun)
 	return true

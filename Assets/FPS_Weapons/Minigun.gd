@@ -15,7 +15,7 @@ var bullet = preload("res://Scenes/Misc/BulletCaseMinigun.tscn")
 
 # State Machine
 enum STATES { NONE, EQUIP, IDLE, SPOOL_UP, SHOOT, SPOOL_DOWN, DE_EQUIP }
-var state = STATES.NONE setget set_state
+var state  setget set_state
 
 # Barrel rotation speed
 export (float) var barrel_full_rotation_speed = 1

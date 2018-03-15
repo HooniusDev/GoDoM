@@ -1,19 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/World.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/FpsController/FpsController.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Images/CrossHairs/crosshair.png" type="Texture" id=3]
-[ext_resource path="res://Assets/LevelMeshes/HooBase1/hoobase1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Images/CrossHairs/crosshair.png" type="Texture" id=2]
+[ext_resource path="res://Assets/LevelMeshes/HooBase1/hoobase1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Collectables/MiniGun_Collectable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Collectables/Shotgun_Collectable.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node"]
 
 script = ExtResource( 1 )
 
-[node name="FpsController" parent="." index="0" instance=ExtResource( 2 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2608, 0, 11.408 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -52,10 +49,30 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 stretch_mode = 0
 _sections_unfolded = [ "Grow Direction", "Margin", "Rect" ]
 
-[node name="hoobase1" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Level" type="Node" parent="." index="1"]
+
+[node name="hoobase1" parent="Level" index="0" instance=ExtResource( 3 )]
+
+[node name="hoobase2" parent="Level" index="1" instance=ExtResource( 3 )]
+
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 59.1128, 0, 36.3858 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="MiniGun_Collect" parent="Level" index="2" instance=ExtResource( 4 )]
+
+transform = Transform( 0.297991, 0, 0.954569, 0, 1, 0, -0.954569, 0, 0.297991, 28.2326, -0.583796, 25.3174 )
+amount = 50
+
+[node name="Shotgun_Collect" parent="Level" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -0.0443917, 0, 0.999014, 0, 1, 0, -0.999014, 0, -0.0443917, 30.1777, -0.0245801, 17.3761 )
+
+[node name="StartSpawn" type="Position3D" parent="." index="2"]
+
+transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 31.4901, -0.261645, 9.99744 )
 
 
