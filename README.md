@@ -1,6 +1,8 @@
 
 # GoDoM
 
+![Dev Screenshot](https://gonevis.s3.amazonaws.com/dolphin/c14b61d4-9701-4b5d-9d1a-46810f0c74f6/1520892444821_screenshot.png)
+
 School project in style of Doom2 and other legendary Fps games.  
 Made with [Godot-Engine](https://www.godotengine.org).
 
