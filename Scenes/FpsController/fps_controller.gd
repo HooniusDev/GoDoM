@@ -8,6 +8,7 @@ onready var head = $Head
 onready var camera = $Head/Camera
 onready var minigun = $Head/Camera/Minigun
 onready var shotgun = $Head/Camera/Shotgun
+onready var unarmed = $Head/Camera/Unarmed
 
 #camera variables
 var camera_angle = 0

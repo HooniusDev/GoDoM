@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/FpsController/fps_controller.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/FpsController/shootray.gd" type="Script" id=2]
 [ext_resource path="res://Assets/FPS_Weapons/FpsMinigun.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/FPS_Weapons/FpsShotgun.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/FPS_Weapons/FpsUnarmed.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 0.4
 height = 1.4
 
-[node name="FpsController" type="KinematicBody" groups=[
+[node name="FpsController" type="KinematicBody" index="0" groups=[
 "Player",
 ]]
 
@@ -62,7 +63,7 @@ projection = 0
 current = true
 fov = 75.0
 size = 1.0
-near = 0.05
+near = 0.01
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
@@ -84,5 +85,11 @@ _sections_unfolded = [ "Transform" ]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190836, -0.554955, 0 )
 visible = false
+
+[node name="Unarmed" parent="Head/Camera" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( -1, 0, -1.20797e-07, 0, 1, 0, 1.50996e-07, 0, -0.8, 0, -1.84858, -0.166557 )
+visible = false
+_sections_unfolded = [ "Transform" ]
 
 

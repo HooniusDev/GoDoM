@@ -23,6 +23,7 @@ var current_weapon = null
 func spawn(world, spawn, init_weapons):
 	if init_weapons:
 		player = player_scene.instance()
+		current_weapon = null
 	world.add_child(player)
 	player.transform = spawn.transform
 	if init_weapons:
@@ -30,7 +31,8 @@ func spawn(world, spawn, init_weapons):
 		has_minigun = false
 		shotgun_ammo = 0
 		minigun_ammo = 0
-		current_weapon = null
+		set_current_weapon(player.unarmed)
+
 
 
 func _process(delta):
@@ -41,6 +43,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("equip_shotgun"):
 			if has_shotgun:
 				set_current_weapon(player.shotgun)
+		if Input.is_action_just_pressed("equip_unarmed"):
+				set_current_weapon(player.unarmed)
 
 func set_current_weapon( weapon ):
 		if current_weapon == weapon:
