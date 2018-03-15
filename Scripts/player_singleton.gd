@@ -2,6 +2,9 @@ extends Node
 
 enum ITEM_TYPES { AMMO, HEALTH, SHELL, BACKPACK, MINIGUN, KEY_BLUE, KEY_YELLOW, KEY_RED, SHOTGUN }
 
+enum states { PAUSED, NORMAL, EQUIPPING }
+var state = states.NORMAL
+
 var player
 
 var health = 100
@@ -21,18 +24,24 @@ func on_respawn():
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("equip_minigun"):
-		if has_minigun:
-			set_current_weapon(player.minigun)
-	if Input.is_action_just_pressed("equip_shotgun"):
-		if has_shotgun:
-			set_current_weapon(player.shotgun)
+	if not state == EQUIPPING:
+		if Input.is_action_just_pressed("equip_minigun"):
+			if has_minigun:
+				set_current_weapon(player.minigun)
+		if Input.is_action_just_pressed("equip_shotgun"):
+			if has_shotgun:
+				set_current_weapon(player.shotgun)
 
 func set_current_weapon( weapon ):
 		if current_weapon == weapon:
 			return
 		if current_weapon != null:
 			current_weapon.de_equip()
+			state = states.EQUIPPING
+			print("equipping!")
+			yield(current_weapon.anim, "animation_finished")
+			state = states.NORMAL
+			print("done!")
 		current_weapon = weapon
 		current_weapon.equip()
 

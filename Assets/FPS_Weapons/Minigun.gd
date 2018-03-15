@@ -111,12 +111,15 @@ func set_state(new_state):
 		print("idle")
 		set_process(true)
 	elif new_state == STATES.DE_EQUIP:
-		if state == SHOOT:
+		if state == SHOOT or state == SPOOL_UP:
 			shoot_sound.play(6)
-			flash.stop()
+			#flash.stop()
 			flash.hide()
 		anim.playback_speed = 2
-		anim.play_backwards("equip")
+		if state == EQUIP:
+			anim.play_backwards("equip", .7 )
+		else:
+			anim.play_backwards("equip")
 	elif new_state == STATES.EQUIP:
 		show()
 		spool = 0
