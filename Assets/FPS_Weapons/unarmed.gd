@@ -7,7 +7,7 @@ onready var anim = $AnimationPlayer
 enum STATES { NONE, EQUIP, IDLE, HIT, DE_EQUIP }
 var state  setget set_state
 
-var ammo = "N/A"
+var ammo = 0
 
 func set_state(new_state):
 	if state == new_state:
