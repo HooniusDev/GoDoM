@@ -9,10 +9,14 @@ onready var shoot_sound = $ShotSound
 onready var reload_sound = $ReloadSound
 onready var flash = $ArmatureShotgun/Muzzle
 
+signal on_shoot
+
 # Weapon variables
 var damage = 5
 var pellets = 4
 var spread = 5
+
+var ammo = 0
 
 ### State Machine ###
 enum STATES { NONE, EQUIP, IDLE, SHOOT, RELOADING, DE_EQUIP }
@@ -23,14 +27,10 @@ func set_state(new_state):
 		print("Already in that state " + str(new_state) )
 		return
 	elif new_state == STATES.SHOOT:
-		anim.playback_speed = 1
-		anim.play("shotgun_shoot")
-		shoot_sound.play()
 		fire()
 	elif new_state == STATES.IDLE:
 		set_process(true)
 		anim.play("shotgun_idle")
-		pass
 	elif new_state == STATES.DE_EQUIP:
 		anim.playback_speed = 2
 		anim.play_backwards("shotgun_equip")
@@ -38,26 +38,41 @@ func set_state(new_state):
 		show()
 		anim.playback_speed = 1
 		anim.play("shotgun_equip")
-		print("equip")
+		# State of not equipped, Dont process and hide away
 	elif new_state == STATES.NONE:
 		anim.stop()
 		hide()
 		set_process(false)
+
 	state = new_state
 
+# Function called from shoot animation to cancel reload part
+# TODO make animation with no ammo, gun held open or something
+func should_reload():
+	if ammo <= 0:
+		set_state(IDLE)
+
+# Change state when animation finishes
 func on_anim_finished( anim_name ):
-	if anim_name == "shotgun_shoot":
-		print("shot finished")
+	if anim_name == "shoot":
 		set_state(IDLE)
 	if anim_name == "shotgun_equip" and state == EQUIP:
-		print("equipped and idling")
 		set_state(IDLE)
 	if anim_name == "shotgun_equip" and state == DE_EQUIP:
 		set_state(NONE)
 
 func fire():
-	for i in range(pellets):
-		shoot_ray.shoot( damage, spread )
+	if ammo > 0:
+		anim.playback_speed = 1
+		anim.play("shoot")
+		shoot_sound.play()
+		for i in range(pellets):
+			shoot_ray.shoot( damage, spread )
+		ammo -= 1
+		emit_signal("on_shoot")
+	else:
+		# play denied sound!
+		pass
 
 # Function to equip
 func equip():

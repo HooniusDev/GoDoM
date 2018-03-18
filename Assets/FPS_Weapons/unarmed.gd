@@ -7,6 +7,8 @@ onready var anim = $AnimationPlayer
 enum STATES { NONE, EQUIP, IDLE, HIT, DE_EQUIP }
 var state  setget set_state
 
+var ammo = "N/A"
+
 func set_state(new_state):
 	if state == new_state:
 		print("Already in that state " + str(new_state) )
@@ -30,7 +32,6 @@ func set_state(new_state):
 		anim.play("equip")
 		pass
 	elif new_state == STATES.NONE:
-		print("NONE")
 		anim.stop()
 		hide()
 		set_process(false)

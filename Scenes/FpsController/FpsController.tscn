@@ -11,7 +11,7 @@
 radius = 0.4
 height = 1.4
 
-[node name="FpsController" type="KinematicBody" index="0" groups=[
+[node name="FpsController" type="KinematicBody" groups=[
 "Player",
 ]]
 
@@ -80,6 +80,7 @@ script = ExtResource( 2 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.599094, 0 )
 visible = false
 _sections_unfolded = [ "Transform" ]
+spooling_delay = 2
 
 [node name="Shotgun" parent="Head/Camera" index="2" instance=ExtResource( 4 )]
 

@@ -15,10 +15,9 @@ var health_max = 100
 var has_shotgun = true
 var has_minigun = true
 
-var shotgun_ammo = 10
-var minigun_ammo = 0
-
 var current_weapon = null
+
+signal player_stats_changed
 
 func spawn(world, spawn, init_weapons):
 	if init_weapons:
@@ -29,11 +28,15 @@ func spawn(world, spawn, init_weapons):
 	if init_weapons:
 		has_shotgun = false
 		has_minigun = false
-		shotgun_ammo = 0
-		minigun_ammo = 0
 		set_current_weapon(player.unarmed)
+	#Update HUH
+	emit_signal("player_stats_changed")
+	#Connect signals to update HUD on shot
+	player.minigun.connect("on_shoot", self, "update_hud")
+	player.shotgun.connect("on_shoot", self, "update_hud")
 
-
+func update_hud():
+	emit_signal("player_stats_changed")
 
 func _process(delta):
 	if not state == EQUIPPING:
@@ -58,6 +61,7 @@ func set_current_weapon( weapon ):
 			print("done!")
 		current_weapon = weapon
 		current_weapon.equip()
+		emit_signal("player_stats_changed")
 
 
 func collect_item(item):
@@ -68,12 +72,13 @@ func collect_item(item):
 	elif item.type == MINIGUN:
 		print("MINIGUN AND AMMO("+str(item.amount)+")" )
 		has_minigun = true
-		minigun_ammo = item.amount
+		player.minigun.ammo = item.amount
 		set_current_weapon(player.minigun)
 	elif item.type == SHOTGUN:
 		print("SHOTGUN AND AMMO("+str(item.amount)+")" )
-		shotgun_ammo = item.amount
+		player.shotgun.ammo = item.amount
 		has_shotgun = true
-		if current_weapon != player.minigun and current_weapon != player.shotgun:
+		if current_weapon.ammo == 0 or current_weapon != player.minigun and current_weapon != player.shotgun:
 			set_current_weapon(player.shotgun)
+
 	return true

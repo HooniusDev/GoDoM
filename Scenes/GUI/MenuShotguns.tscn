@@ -1,0 +1,221 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/GUI/ShootGuns.tres" type="Animation" id=1]
+[ext_resource path="res://Assets/PropMeshes/shotgun.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Images/MuzzleFlashes/side_m_4.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "idle-loop"
+length = 0.01
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shotgun/Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shotgun:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -2, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shotgun2:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 2, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shotgun2/Sprite3D2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Shotgun/Sprite3D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Shotgun2/Sprite3D2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="MenuShotguns" type="Spatial"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="ShotgunAnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = "idle-loop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/ShootGuns = ExtResource( 1 )
+anims/idle-loop = SubResource( 1 )
+anims/shoot = ExtResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="OmniLight" type="OmniLight" parent="." index="1"]
+
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.37103, 1.07753, 3.27748 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+
+[node name="OmniLight2" type="OmniLight" parent="." index="2"]
+
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.25277, -1.28922, 3.27748 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+
+[node name="Shotgun" parent="." index="3" instance=ExtResource( 2 )]
+
+transform = Transform( -4.37114e-08, -0.0174524, -0.999848, 0, 0.999848, -0.0174524, 1, -7.62869e-10, -4.37047e-08, -2.22397, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite3D" type="Sprite3D" parent="Shotgun" index="2"]
+
+transform = Transform( -2.60421e-08, 4.40386e-10, 1, -9.31323e-10, 0.595722, 4.40388e-10, -0.595723, -9.31323e-10, -4.37091e-08, -5.46298e-08, 0.107489, -1.25061 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 3 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Shotgun2" parent="." index="4" instance=ExtResource( 2 )]
+
+transform = Transform( -4.37114e-08, 0.0174524, 0.999848, 0, 0.999848, -0.0174524, -1, -7.62869e-10, -4.37047e-08, 2.39409, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite3D2" type="Sprite3D" parent="Shotgun2" index="2"]
+
+transform = Transform( -2.60399e-08, 0, 1, 0, 0.595723, 0, -0.595723, 0, -4.37114e-08, 5.50901e-08, 0.00791527, -1.26897 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = true
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 3 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+

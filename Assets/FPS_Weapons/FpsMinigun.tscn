@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/FPS_Weapons/Anim/minigun_shoot.tres" type="Animation" id=4]
 [ext_resource path="res://Assets/Sounds/Effects/Weapons/minigun-spool-firing.wav" type="AudioStream" id=5]
 
-[node name="Minigun" index="0" instance=ExtResource( 1 )]
+[node name="Minigun" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 barrel_full_rotation_speed = 1
@@ -14,7 +14,7 @@ spooling_delay = 1.8
 
 [node name="ArmatureMinigun" parent="." index="0"]
 
-transform = Transform( -1, -1.74846e-07, -3.89414e-07, -1.74846e-07, 1, 3.38813e-21, 3.89414e-07, 6.80874e-14, -1, 0, 0, 0 )
+transform = Transform( -1, -1.74846e-07, -3.89414e-07, -1.74846e-07, 1, -6.09864e-20, 3.89414e-07, 6.80873e-14, -1, 0, 0, 0 )
 
 [node name="Minigun" parent="ArmatureMinigun/Skeleton" index="0"]
 
@@ -30,8 +30,8 @@ _sections_unfolded = [ "Visibility" ]
 
 transform = Transform( 1, 2.65142e-20, 0, 2.65142e-20, 1, 0, 0, 0, 1, 0, 0.280441, 0 )
 layers = 2
-light_color = Color( 0.885653, 0.86517, 0.557921, 1 )
-light_energy = 0.0
+light_color = Color( 0.985085, 0.977106, 0.857419, 1 )
+light_energy = 0.869565
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -65,8 +65,8 @@ offset = Vector2( 0, 0 )
 flip_h = false
 flip_v = false
 modulate = Color( 1, 1, 1, 1 )
-opacity = 0.0
-pixel_size = 0.0304
+opacity = 0.869565
+pixel_size = 0.02
 axis = 2
 transparent = true
 shaded = false

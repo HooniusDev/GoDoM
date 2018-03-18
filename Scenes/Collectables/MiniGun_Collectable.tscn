@@ -7,7 +7,7 @@
 
 extents = Vector3( 0.383849, 0.400413, 0.919125 )
 
-[node name="MiniGun_Collect" type="Area"]
+[node name="MiniGun_Collect" type="Area" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false

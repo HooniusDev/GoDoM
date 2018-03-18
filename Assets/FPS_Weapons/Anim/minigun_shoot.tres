@@ -52,7 +52,7 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "on_shot_fired"
+"method": "fire"
 } ]
 }
 tracks/6/type = "value"

@@ -1,11 +1,14 @@
 extends Node
 
-
+var loading = true
 
 func _ready():
 	randomize()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+	# spawn player ( TODO: refactor to spawn start and spawn loaded )
 	Player.spawn( self, $StartSpawn, true)
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):

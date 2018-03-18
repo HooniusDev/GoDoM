@@ -7,7 +7,7 @@ path="res://.import/unarmed.dae-215ae742c9a5e4cbc57d777cd99675f9.scn"
 [deps]
 
 source_file="res://Assets/FPS_Weapons/unarmed.dae"
-source_md5="ca6fb28b5b9d2588ccb4d83523abc766"
+source_md5="be335b929e353e085f6e7423235f072d"
 
 dest_files=[ "res://.import/unarmed.dae-215ae742c9a5e4cbc57d777cd99675f9.scn" ]
 dest_md5="41bc594e565c8ec90327f412c441294f"
