@@ -1,3 +1,7 @@
+#######################################
+### player_singleton.gd 			###
+### Autoloaded manager for player 	###
+#######################################
 extends Node
 
 var player_scene = preload("res://Scenes/FpsController/FpsController.tscn")

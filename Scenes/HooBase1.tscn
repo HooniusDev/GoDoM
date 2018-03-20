@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Collectables/MiniGun_Collectable.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Collectables/Shotgun_Collectable.tscn" type="PackedScene" id=5]
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 script = ExtResource( 1 )
 
