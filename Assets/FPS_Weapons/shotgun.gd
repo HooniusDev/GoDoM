@@ -7,7 +7,7 @@ onready var anim = $AnimationPlayer
 onready var shoot_ray = $"../ShootRay"
 onready var shoot_sound = $ShotSound
 onready var reload_sound = $ReloadSound
-onready var flash = $ArmatureShotgun/Muzzle
+onready var flash = $ArmatureShotgun/Skeleton/BoneAttachment/Muzzle
 
 signal on_shoot
 
@@ -54,8 +54,10 @@ func should_reload():
 
 # Change state when animation finishes
 func on_anim_finished( anim_name ):
-	if anim_name == "shoot":
+	print(anim_name)
+	if anim_name == "Shotgun_shoot":
 		set_state(IDLE)
+		#flash.hide()
 	if anim_name == "shotgun_equip" and state == EQUIP:
 		set_state(IDLE)
 	if anim_name == "shotgun_equip" and state == DE_EQUIP:
@@ -63,8 +65,9 @@ func on_anim_finished( anim_name ):
 
 func fire():
 	if ammo > 0:
+		#flash.show()
 		anim.playback_speed = 1
-		anim.play("shoot")
+		anim.play("Shotgun_shoot")
 		shoot_sound.play()
 		for i in range(pellets):
 			shoot_ray.shoot( damage, spread )

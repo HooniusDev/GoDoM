@@ -2,6 +2,12 @@ extends Node
 
 var loading = true
 
+func on_pause_game():
+	#get_tree().paused = true
+	$HUD/PauseMenu.show_menu()
+	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
 func _ready():
 	randomize()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -12,7 +18,8 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		on_pause_game()
+
 		#get_tree().quit()
 	if Input.is_action_just_pressed("debug_restart_level"):
 		#Player.spawn(self, $StartSpawn, false)

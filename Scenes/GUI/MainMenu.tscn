@@ -12,7 +12,7 @@
 
 default_font = ExtResource( 1 )
 
-[node name="MainMenu" type="ViewportContainer" index="0"]
+[node name="MainMenu" type="ViewportContainer"]
 
 editor/display_folded = true
 anchor_left = 0.0

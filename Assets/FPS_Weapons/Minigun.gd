@@ -36,6 +36,12 @@ var ammo = 0
 var spool = 0
 export (float) var spooling_delay = 2
 
+func _notification(what):
+	if what == NOTIFICATION_PAUSED:
+		shoot_sound.stop()
+	if what == NOTIFICATION_UNPAUSED:
+		shoot_sound.play()
+
 # Function to equip
 func equip():
 	set_state(EQUIP)

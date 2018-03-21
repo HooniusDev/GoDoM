@@ -79,7 +79,7 @@ script = ExtResource( 2 )
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.599094, 0 )
 visible = false
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Pause", "Transform" ]
 spooling_delay = 2
 
 [node name="Shotgun" parent="Head/Camera" index="2" instance=ExtResource( 4 )]
