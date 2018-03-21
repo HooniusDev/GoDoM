@@ -14,6 +14,7 @@ func _ready():
 
 	# spawn player ( TODO: refactor to spawn start and spawn loaded )
 	Player.spawn( self, $StartSpawn, true)
+	AudioMaster.play_static_sound()
 
 
 func _process(delta):

@@ -36,12 +36,6 @@ var ammo = 0
 var spool = 0
 export (float) var spooling_delay = 2
 
-func _notification(what):
-	if what == NOTIFICATION_PAUSED:
-		shoot_sound.stop()
-	if what == NOTIFICATION_UNPAUSED:
-		shoot_sound.play()
-
 # Function to equip
 func equip():
 	set_state(EQUIP)
@@ -140,6 +134,7 @@ func set_state(new_state):
 		spool = 0
 		anim.playback_speed = 1
 		anim.play("equip")
+		shoot_sound.play(6.5)
 	# Weapon is not currently selected by player so show and stop all
 	elif new_state == STATES.NONE:
 		anim.stop()
@@ -171,6 +166,11 @@ func _process(delta):
 func _ready():
 	set_state(NONE)
 	anim.connect("animation_finished",self, "on_anim_finished")
+
+func _notification(what):
+	if what == NOTIFICATION_PAUSED:
+		if state == STATES.SHOOT:
+			shoot_sound.stop()
 
 
 

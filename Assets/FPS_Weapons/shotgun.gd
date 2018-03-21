@@ -33,7 +33,7 @@ func set_state(new_state):
 		anim.play("shotgun_idle")
 	elif new_state == STATES.DE_EQUIP:
 		anim.playback_speed = 2
-		anim.play_backwards("shotgun_equip")
+		anim.play_backwards("shotgun_de-equip")
 	elif new_state == STATES.EQUIP:
 		show()
 		anim.playback_speed = 1
@@ -54,7 +54,6 @@ func should_reload():
 
 # Change state when animation finishes
 func on_anim_finished( anim_name ):
-	print(anim_name)
 	if anim_name == "Shotgun_shoot":
 		set_state(IDLE)
 		#flash.hide()

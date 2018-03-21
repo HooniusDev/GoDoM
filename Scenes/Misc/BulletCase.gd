@@ -13,9 +13,10 @@ func _process(delta):
 		queue_free()
 
 func _on_BulletCase_body_entered(body):
+	# Play cling and stop registering for collisions
 	if not collided:
 		collided = true
-		print("CLING")
 		AudioMaster.play_sound_at( cling, global_transform.origin )
+		# Stop registering collisions #
 		contacts_reported = 0
 		disconnect("body_entered",self,"_on_BulletCase_body_entered")

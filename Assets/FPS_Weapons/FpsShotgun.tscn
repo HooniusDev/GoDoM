@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/FPS_Weapons/shotgun.dae" type="PackedScene" id=1]
 [ext_resource path="res://Assets/FPS_Weapons/shotgun.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Images/MuzzleFlashes/MuzzleFlash2.tga" type="Texture" id=3]
 [ext_resource path="res://Assets/FPS_Weapons/Anim/Shotgun_shoot.tres" type="Animation" id=4]
-[ext_resource path="res://Assets/Sounds/Effects/Weapons/handgun-reload.wav" type="AudioStream" id=5]
-[ext_resource path="res://Assets/Sounds/Effects/Weapons/shotgun-shoot.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/FPS_Weapons/Anim/shotgun_de-equip.tres" type="Animation" id=5]
+[ext_resource path="res://Assets/FPS_Weapons/Anim/shotgun_equip.tres" type="Animation" id=6]
+[ext_resource path="res://Assets/Sounds/Effects/Weapons/handgun-reload.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Sounds/Effects/Weapons/shotgun-shoot.wav" type="AudioStream" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -193,6 +195,10 @@ tracks/11/keys = PoolRealArray( 0, 1, 1.08033e-07, 5.58794e-09, 1.19209e-07, -0.
 
 script = ExtResource( 2 )
 
+[node name="ArmatureShotgun" parent="." index="0"]
+
+transform = Transform( -1, 0, -3.89414e-07, 0, 1, 0, 3.89414e-07, 0, -1, 0, 0, 0 )
+
 [node name="Skeleton" parent="ArmatureShotgun" index="0"]
 
 bones/3/bound_children = [ NodePath("BoneAttachment") ]
@@ -208,13 +214,12 @@ _sections_unfolded = [ "material" ]
 
 [node name="BoneAttachment" type="BoneAttachment" parent="ArmatureShotgun/Skeleton" index="2"]
 
-transform = Transform( 0.99261, -0.119019, 0.0236496, -0.0854893, -0.824208, -0.559797, 0.0861188, 0.553638, -0.828292, -0.015483, 0.291466, 0.396739 )
+transform = Transform( 0.999777, -0.0039967, -0.0207476, -0.00281779, -0.998396, 0.0565428, -0.0209403, -0.0564717, -0.998185, 0.0101059, -0.0262252, 0.486028 )
 bone_name = "barrel"
 
 [node name="Muzzle" type="Position3D" parent="ArmatureShotgun/Skeleton/BoneAttachment" index="0"]
 
 transform = Transform( 0.999774, 0.010772, 0.0183333, 0.0107738, -0.999942, 0, 0.0183322, 0.00019752, -0.999832, -0.0138859, 0.00680196, -0.601201 )
-visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite3D" parent="ArmatureShotgun/Skeleton/BoneAttachment/Muzzle" index="0"]
@@ -234,8 +239,8 @@ offset = Vector2( 0, 0 )
 flip_h = false
 flip_v = false
 modulate = Color( 1, 1, 1, 1 )
-opacity = 0.1
-pixel_size = 0.03
+opacity = 0.0
+pixel_size = 0.02
 axis = 2
 transparent = true
 shaded = false
@@ -278,10 +283,12 @@ autoplay = "shotgun_equip"
 anims/Shotgun_shoot = ExtResource( 4 )
 anims/equip = SubResource( 1 )
 anims/idle = SubResource( 2 )
+anims/shotgun_de-equip = ExtResource( 5 )
+anims/shotgun_equip = ExtResource( 6 )
 
 [node name="ReloadSound" type="AudioStreamPlayer3D" parent="." index="2"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 7 )
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 1.0
@@ -300,7 +307,7 @@ doppler_tracking = 0
 
 [node name="ShotSound" type="AudioStreamPlayer3D" parent="." index="3"]
 
-stream = ExtResource( 6 )
+stream = ExtResource( 8 )
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 1.0
