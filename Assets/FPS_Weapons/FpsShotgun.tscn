@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/FPS_Weapons/shotgun.dae" type="PackedScene" id=1]
 [ext_resource path="res://Assets/FPS_Weapons/shotgun.gd" type="Script" id=2]
@@ -191,17 +191,34 @@ tracks/11/imported = true
 tracks/11/enabled = true
 tracks/11/keys = PoolRealArray( 0, 1, 1.08033e-07, 5.58794e-09, 1.19209e-07, -0.00496747, 0.0159613, 0.0844323, 0.996289, 1, 1, 1, 0.0416667, 1, 1.08033e-07, 5.58794e-09, 1.19209e-07, -0.00496747, 0.0159613, 0.0844323, 0.996289, 1, 1, 1 )
 
-[node name="Shotgun" index="0" instance=ExtResource( 1 )]
+[sub_resource type="Animation" id=3]
+
+resource_name = "no_ammo"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("ReloadSound")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play"
+} ]
+}
+
+[node name="Shotgun" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
 [node name="ArmatureShotgun" parent="." index="0"]
 
 transform = Transform( -1, 0, -3.89414e-07, 0, 1, 0, 3.89414e-07, 0, -1, 0, 0, 0 )
-
-[node name="Skeleton" parent="ArmatureShotgun" index="0"]
-
-bones/3/bound_children = [ NodePath("BoneAttachment") ]
 
 [node name="Arm" parent="ArmatureShotgun/Skeleton" index="0"]
 
@@ -214,7 +231,7 @@ _sections_unfolded = [ "material" ]
 
 [node name="BoneAttachment" type="BoneAttachment" parent="ArmatureShotgun/Skeleton" index="2"]
 
-transform = Transform( 0.999777, -0.0039967, -0.0207476, -0.00281779, -0.998396, 0.0565428, -0.0209403, -0.0564717, -0.998185, 0.0101059, -0.0262252, 0.486028 )
+transform = Transform( 1, -1.27952e-06, 1.62524e-20, -1.27952e-06, -1, -1.84524e-07, 2.27374e-13, 1.84524e-07, -1, -6.59789e-21, 0.00130419, 0.486839 )
 bone_name = "barrel"
 
 [node name="Muzzle" type="Position3D" parent="ArmatureShotgun/Skeleton/BoneAttachment" index="0"]
@@ -283,6 +300,7 @@ autoplay = "shotgun_equip"
 anims/Shotgun_shoot = ExtResource( 4 )
 anims/equip = SubResource( 1 )
 anims/idle = SubResource( 2 )
+anims/no_ammo = SubResource( 3 )
 anims/shotgun_de-equip = ExtResource( 5 )
 anims/shotgun_equip = ExtResource( 6 )
 

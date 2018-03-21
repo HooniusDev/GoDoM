@@ -25,10 +25,12 @@ var state setget set_state
 func set_state(new_state):
 	if state == new_state:
 		print("Already in that state " + str(new_state) )
-		return
+		#return
 	elif new_state == STATES.SHOOT:
+		print("state_shoot")
 		fire()
 	elif new_state == STATES.IDLE:
+		print("state_Idle")
 		set_process(true)
 		anim.play("shotgun_idle")
 	elif new_state == STATES.DE_EQUIP:
@@ -54,7 +56,7 @@ func should_reload():
 
 # Change state when animation finishes
 func on_anim_finished( anim_name ):
-	if anim_name == "Shotgun_shoot":
+	if anim_name == "Shotgun_shoot" or anim_name == "no_ammo":
 		set_state(IDLE)
 		#flash.hide()
 	if anim_name == "shotgun_equip" and state == EQUIP:
@@ -72,9 +74,17 @@ func fire():
 			shoot_ray.shoot( damage, spread )
 		ammo -= 1
 		emit_signal("on_shoot")
+		drop_cases()
 	else:
-		# play denied sound!
+		print("no ammo")
+		anim.play("no_ammo")
 		pass
+
+func drop_cases():
+	var instance = preload("res://Scenes/Misc/BulletCaseMinigun.tscn").instance()
+	get_tree().get_root().get_node("World").add_child(instance)
+	instance.global_transform = global_transform
+	instance.linear_velocity = -instance.global_transform.basis.y * 1 + get_node("../../..").velocity
 
 # Function to equip
 func equip():
@@ -92,5 +102,6 @@ func _ready():
 func _process(delta):
 	### Inputs ###
 	if Input.is_action_just_pressed("fire0") and state == IDLE:
+		print("fire!")
 		set_state( SHOOT )
 

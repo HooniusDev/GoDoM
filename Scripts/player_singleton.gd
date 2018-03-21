@@ -71,18 +71,23 @@ func set_current_weapon( weapon ):
 func collect_item(item):
 	if item.type == AMMO:
 		print("ammo receiced")
+		player.minigun.ammo += item.amount
+	elif item.type == SHELL:
+		print("shells receiced")
+		player.shotgun.ammo += item.amount
 	elif item.type == HEALTH:
 		print("health receiced")
 	elif item.type == MINIGUN:
 		print("MINIGUN AND AMMO("+str(item.amount)+")" )
 		has_minigun = true
-		player.minigun.ammo = item.amount
+		player.minigun.ammo += item.amount
 		set_current_weapon(player.minigun)
 	elif item.type == SHOTGUN:
 		print("SHOTGUN AND AMMO("+str(item.amount)+")" )
-		player.shotgun.ammo = item.amount
+		player.shotgun.ammo += item.amount
 		has_shotgun = true
 		if current_weapon.ammo == 0 or current_weapon != player.minigun and current_weapon != player.shotgun:
 			set_current_weapon(player.shotgun)
+	emit_signal("player_stats_changed")
 
 	return true

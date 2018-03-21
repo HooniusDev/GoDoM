@@ -7,7 +7,7 @@
 
 extents = Vector3( 0.383849, 0.130203, 0.146461 )
 
-[node name="ShellBox" type="Area" index="0"]
+[node name="ShellBox" type="Area"]
 
 input_ray_pickable = true
 input_capture_on_drag = false

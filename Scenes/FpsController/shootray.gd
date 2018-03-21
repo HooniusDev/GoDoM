@@ -5,6 +5,8 @@ var original_orientation
 var particle_small = preload("res://Scenes/Particles/BulletHitMetalSmall.tscn")
 var particle_large = preload("res://Scenes/Particles/BulletHitMetalLarge.tscn")
 
+var tracer_scene = preload("res://Scenes/Misc/Tracer.tscn")
+
 func _ready():
 	original_orientation = transform.basis
 
@@ -39,5 +41,20 @@ func shoot( damage, spread ):
 		hit.transform = hit.transform.looking_at( hit.transform.origin - normal, rotate_axis )
 		hit.emitting = true
 
+		create_tracer(point)
+
 	transform = original_orientation
+
+func create_tracer(end_point):
+	var tracer = tracer_scene.instance()
+	get_tree().get_root().get_node("World").add_child(tracer)
+	# Start at players current weapon muzzle
+	var tracer_start = Player.current_weapon.flash.global_transform.origin
+	tracer.global_transform.origin = tracer_start
+	tracer.global_transform = tracer.global_transform.looking_at( end_point, Vector3(0,1,0))
+	var length = tracer_start - end_point
+	tracer.scale.z = length.length()
+
+	pass
+
 

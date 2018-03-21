@@ -7,8 +7,9 @@
 
 extents = Vector3( 0.383849, 0.400413, 0.919125 )
 
-[node name="MiniGun_Collect" type="Area" index="0"]
+[node name="MiniGun_Collect" type="Area"]
 
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0 )
 input_ray_pickable = true
 input_capture_on_drag = false
 space_override = 0
@@ -30,9 +31,9 @@ reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 type = 4
-amount = 1
+amount = 20
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 

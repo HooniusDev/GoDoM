@@ -64,6 +64,7 @@ func fire():
 		emit_signal("on_shoot")
 	else:
 		#play_sound click!
+		#set_state()
 		pass
 
 # Spool Up state
