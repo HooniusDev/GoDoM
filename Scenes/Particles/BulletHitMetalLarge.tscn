@@ -1,85 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Particles/bullet_hit.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sounds/Effects/Bullets/gun-sound-4.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Particles/MetalParticles.tres" type="Material" id=1]
+[ext_resource path="res://Scenes/Particles/bullet_hit.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sounds/Effects/Bullets/gun-sound-4.wav" type="AudioStream" id=3]
 
-[sub_resource type="Gradient" id=1]
-
-offsets = PoolRealArray( 0, 1 )
-colors = PoolColorArray( 0.930908, 0.952492, 0.960938, 1, 0.343552, 0.360765, 0.371094, 1 )
-
-[sub_resource type="GradientTexture" id=2]
-
-flags = 4
-gradient = SubResource( 1 )
-width = 128
-
-[sub_resource type="Curve" id=3]
-
-min_value = 0.0
-max_value = 100.0
-bake_resolution = 100
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 70.4102 ), 305.939, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=4]
-
-flags = 4
-width = 2048
-curve = SubResource( 3 )
-
-[sub_resource type="Curve" id=5]
-
-min_value = 0.0
-max_value = 1.0
-bake_resolution = 100
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.145508 ), -1.23887, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=6]
-
-flags = 4
-width = 128
-curve = SubResource( 5 )
-
-[sub_resource type="ParticlesMaterial" id=7]
-
-render_priority = 0
-trail_divisor = 1
-emission_shape = 0
-flag_align_y = false
-flag_rotate_y = false
-flag_disable_z = false
-spread = 30.0
-flatness = 0.0
-gravity = Vector3( 0, -4, 0 )
-initial_velocity = 3.5
-initial_velocity_random = 0.0
-angular_velocity = 0.0
-angular_velocity_random = 0.0
-linear_accel = 0.0
-linear_accel_random = 0.0
-radial_accel = 0.0
-radial_accel_random = 0.0
-tangential_accel = 0.0
-tangential_accel_random = 0.0
-damping = 2.0
-damping_random = 0.2
-damping_curve = SubResource( 4 )
-angle = 0.0
-angle_random = 0.0
-scale = 1.0
-scale_random = 0.0
-scale_curve = SubResource( 6 )
-color_ramp = SubResource( 2 )
-hue_variation = 0.1
-hue_variation_random = 0.2
-anim_speed = 0.0
-anim_speed_random = 0.0
-anim_offset = 0.0
-anim_offset_random = 0.0
-anim_loop = false
-_sections_unfolded = [ "Color", "Damping", "Gravity", "Hue Variation", "Initial Velocity", "Scale", "Spread" ]
-
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=1]
 
 render_priority = 0
 flags_transparent = false
@@ -131,9 +56,9 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Vertex Color" ]
 
-[sub_resource type="CubeMesh" id=9]
+[sub_resource type="CubeMesh" id=2]
 
-material = SubResource( 8 )
+material = SubResource( 1 )
 size = Vector3( 0.1, 0.1, 0.1 )
 subdivide_width = 0
 subdivide_height = 0
@@ -163,15 +88,15 @@ fract_delta = true
 visibility_aabb = AABB( -4, -4, -4, 8, 8, 8 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 7 )
+process_material = ExtResource( 1 )
 draw_passes = 1
-draw_pass_1 = SubResource( 9 )
-script = ExtResource( 1 )
+draw_pass_1 = SubResource( 2 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Draw Passes", "Process Material", "Time" ]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="0"]
 
-stream = ExtResource( 2 )
+stream = ExtResource( 3 )
 attenuation_model = 0
 unit_db = 0.0
 unit_size = 1.0

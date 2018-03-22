@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=2]
-
-[ext_resource path="res://Scenes/Misc/Tracer.gd" type="Script" id=1]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -25,7 +23,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0.925781, 0.878317, 0.166351, 0.287294 )
+albedo_color = Color( 0.925781, 0.878317, 0.166351, 0 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -57,7 +55,7 @@ _sections_unfolded = [ "Albedo", "Flags" ]
 [sub_resource type="CubeMesh" id=2]
 
 material = SubResource( 1 )
-size = Vector3( 0.1, 0.1, 2 )
+size = Vector3( 0.1, 0.1, 1 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
@@ -80,15 +78,28 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 0.925781, 0.878317, 0.166351, 0.287294 ), Color( 0.925781, 0.878317, 0.166351, 0 ) ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
 
 [node name="Tracer" type="Spatial"]
 
-script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 layers = 1
 material_override = null
 cast_shadow = 1

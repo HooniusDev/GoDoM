@@ -3,6 +3,7 @@ extends RayCast
 var original_orientation
 
 var particle_small = preload("res://Scenes/Particles/BulletHitMetalSmall.tscn")
+var particle_blood = preload("res://Scenes/Particles/BulletHitEnemySmall.tscn")
 var particle_large = preload("res://Scenes/Particles/BulletHitMetalLarge.tscn")
 
 var tracer_scene = preload("res://Scenes/Misc/Tracer.tscn")
@@ -21,14 +22,17 @@ func shoot( damage, spread ):
 	force_raycast_update()
 
 	if is_colliding():
-		var object = get_collider().get_parent()
+
+		var object = get_collider()
 		if object.has_method("take_damage"):
 			object.take_damage(damage)
 		var normal = get_collision_normal()
 		var point = get_collision_point()
 		var hit
-		if damage > 3:
-			hit = particle_large.instance()
+
+		# Ugly stuff to diffentiate enemy hit.
+		if object.is_in_group("enemy"):
+			hit = particle_blood.instance()
 		else:
 			hit = particle_small.instance()
 		get_tree().get_root().get_node("World").add_child(hit)
@@ -55,6 +59,5 @@ func create_tracer(end_point):
 	var length = tracer_start - end_point
 	tracer.scale.z = length.length()
 
-	pass
 
 

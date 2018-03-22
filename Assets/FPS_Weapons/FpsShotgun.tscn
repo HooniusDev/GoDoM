@@ -237,11 +237,13 @@ bone_name = "barrel"
 [node name="Muzzle" type="Position3D" parent="ArmatureShotgun/Skeleton/BoneAttachment" index="0"]
 
 transform = Transform( 0.999774, 0.010772, 0.0183333, 0.0107738, -0.999942, 0, 0.0183322, 0.00019752, -0.999832, -0.0138859, 0.00680196, -0.601201 )
+visible = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite3D" parent="ArmatureShotgun/Skeleton/BoneAttachment/Muzzle" index="0"]
 
 transform = Transform( 1, -1.49012e-08, 0, 0, 1, 2.98023e-08, 0, 0, 1, 0.0207579, 0, 0 )
+visible = false
 layers = 1
 material_override = null
 cast_shadow = 1

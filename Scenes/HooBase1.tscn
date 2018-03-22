@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/HUD/Hud.tscn" type="PackedScene" id=2]
@@ -8,8 +8,17 @@
 [ext_resource path="res://Scenes/Collectables/Shotgun_Collectable.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Collectables/MiniGun_Collectable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/Characters/Grunt/Grunt.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Characters/Grunt/Grunt.gd" type="Script" id=9]
 
-[node name="World" type="Node" index="0"]
+[sub_resource type="Curve3D" id=1]
+
+bake_interval = 0.2
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -2.26571, -0.0461538, -0.2565, 0, 0, 0, 0, 0, 0, -7.65023, -0.0337949, 0.916, 0, 0, 0, 0, 0, 0, -8.99423, 0.019909, 4.23814, 0, 0, 0, 0, 0, 0, -3.60853, 0.00670177, 3.58906, 0, 0, 0, 0, 0, 0, 0.631136, 0.00670213, 1.87968, 0, 0, 0, 0, 0, 0, -2.26571, -0.0461538, -0.2565 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0 )
+}
+
+[node name="World" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -29,6 +38,8 @@ transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.031074
 
 [node name="hoobase1" parent="Level" index="2" instance=ExtResource( 5 )]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="hoobase2" parent="Level" index="3" instance=ExtResource( 5 )]
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 59.1128, 0, 36.3858 )
@@ -43,9 +54,27 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 transform = Transform( -0.050451, 0, 0.69818, 0, 0.7, 0, -0.69818, 0, -0.050451, 27.8773, -0.540147, 24.7962 )
 
-[node name="Grunt" parent="Level" index="6" instance=ExtResource( 8 )]
+[node name="Path" type="Path" parent="Level" index="6"]
 
-transform = Transform( -0.971219, 0, 0.23819, 0, 1, 0, -0.23819, 0, -0.971219, 28.3577, -0.951389, 26.7789 )
+transform = Transform( -0.472811, 0, -0.881165, 0, 1, 0, 0.881165, 0, -0.472811, 28.3577, -0.951389, 26.7789 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Level/Path" index="0"]
+
+transform = Transform( 0.998151, 0.0052508, 0.0605492, -0.0052422, 0.999986, -0.000300928, -0.0605501, -1.70476e-05, 0.998165, -2.26649, -0.0630189, -0.218216 )
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotation_mode = 1
+cubic_interp = true
+loop = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Grunt" parent="Level/Path/PathFollow" index="0" instance=ExtResource( 8 )]
+
+transform = Transform( 2.75075e-05, -0.00554305, -0.999985, -0.0049412, 0.999973, -0.00554312, 0.999988, 0.00494129, -1.49012e-07, 0, 0, 0 )
+script = ExtResource( 9 )
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="StartSpawn" type="Position3D" parent="." index="2"]
 
