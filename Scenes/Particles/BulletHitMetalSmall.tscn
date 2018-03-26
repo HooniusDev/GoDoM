@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Particles/bullet_hit.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sounds/Effects/Bullets/gun-sound-4.wav" type="AudioStream" id=3]
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=1]
 
 render_priority = 0
 flags_transparent = false
@@ -56,15 +56,15 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CubeMesh" id=9]
+[sub_resource type="CubeMesh" id=2]
 
-material = SubResource( 8 )
+material = SubResource( 1 )
 size = Vector3( 0.1, 0.1, 0.1 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="BulletHitMetalSmall" type="Particles"]
+[node name="BulletHitMetalSmall" type="Particles" index="0"]
 
 layers = 1
 material_override = null
@@ -90,7 +90,7 @@ local_coords = true
 draw_order = 0
 process_material = ExtResource( 1 )
 draw_passes = 1
-draw_pass_1 = SubResource( 9 )
+draw_pass_1 = SubResource( 2 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Draw Passes", "Process Material", "Time" ]
 

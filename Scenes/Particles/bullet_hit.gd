@@ -1,5 +1,8 @@
+###############################################
+### bullet_hit.gd 							###
+### Autodetructor for bullet hit particles	###
+###############################################
 extends Particles
-
 
 var timer = 1
 

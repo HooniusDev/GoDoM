@@ -6,13 +6,17 @@ extends Node
 
 var player_scene = preload("res://Scenes/FpsController/FpsController.tscn")
 
+# Collectable items
 enum ITEM_TYPES { AMMO, HEALTH, SHELL, BACKPACK, MINIGUN, KEY_BLUE, KEY_YELLOW, KEY_RED, SHOTGUN }
 
+# States Variables
 enum states { PAUSED, NORMAL, EQUIPPING }
 var state = states.NORMAL
 
+# Reference to player node
 var player
 
+# Stats Variables
 var health = 100
 var health_max = 100
 
@@ -21,8 +25,10 @@ var has_minigun = true
 
 var current_weapon = null
 
+# Signal to update HUD
 signal player_stats_changed
 
+# Spawn player, TODO: add spawn and loaded spawn
 func spawn(world, spawn, init_weapons):
 	if init_weapons:
 		player = player_scene.instance()
@@ -59,10 +65,11 @@ func set_current_weapon( weapon ):
 		if current_weapon != null:
 			current_weapon.de_equip()
 			state = states.EQUIPPING
-			print("equipping!")
+			#print("equipping!")
+			# Wait for the de-equip animation to finish
 			yield(current_weapon.anim, "animation_finished")
 			state = states.NORMAL
-			print("done!")
+			#print("done!")
 		current_weapon = weapon
 		current_weapon.equip()
 		emit_signal("player_stats_changed")
@@ -70,22 +77,24 @@ func set_current_weapon( weapon ):
 
 func collect_item(item):
 	if item.type == AMMO:
-		print("ammo receiced")
+		#print("ammo receiced")
 		player.minigun.ammo += item.amount
 	elif item.type == SHELL:
-		print("shells receiced")
+		#print("shells receiced")
 		player.shotgun.ammo += item.amount
 	elif item.type == HEALTH:
-		print("health receiced")
+		#print("health receiced")
+		player.health += item.amount
 	elif item.type == MINIGUN:
-		print("MINIGUN AND AMMO("+str(item.amount)+")" )
+		#print("MINIGUN AND AMMO("+str(item.amount)+")" )
 		has_minigun = true
 		player.minigun.ammo += item.amount
 		set_current_weapon(player.minigun)
 	elif item.type == SHOTGUN:
-		print("SHOTGUN AND AMMO("+str(item.amount)+")" )
+		#print("SHOTGUN AND AMMO("+str(item.amount)+")" )
 		player.shotgun.ammo += item.amount
 		has_shotgun = true
+		# Auto switch weapon logic
 		if current_weapon.ammo == 0 or current_weapon != player.minigun and current_weapon != player.shotgun:
 			set_current_weapon(player.shotgun)
 	emit_signal("player_stats_changed")

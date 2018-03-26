@@ -1,3 +1,7 @@
+###############################################
+### BulletCase.gd 							###
+### handles bullet casing sounds			###
+###############################################
 extends RigidBody
 
 export (float) var life_time

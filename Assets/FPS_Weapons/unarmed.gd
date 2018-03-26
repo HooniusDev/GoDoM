@@ -1,3 +1,8 @@
+#######################################
+### unarmed.gd 						###
+###									###
+#######################################
+
 extends Spatial
 
 ### Cache ###
@@ -39,10 +44,10 @@ func set_state(new_state):
 
 func on_anim_finished( anim_name ):
 	if anim_name == "unarmed_punch":
-		print("shot finished")
+		#print("shot finished")
 		set_state(IDLE)
 	if anim_name == "equip" and state == EQUIP:
-		print("equipped and idling")
+		#print("equipped and idling")
 		set_state(IDLE)
 	if anim_name == "equip" and state == DE_EQUIP:
 		set_state(NONE)

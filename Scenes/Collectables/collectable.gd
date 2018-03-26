@@ -1,3 +1,7 @@
+################################################
+### collectable.gd 							 ###
+### controller for items that are collectable###
+################################################
 extends Area
 
 const TYPE = preload("res://Scripts/player_singleton.gd").ITEM_TYPES

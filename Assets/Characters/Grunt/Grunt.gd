@@ -1,3 +1,7 @@
+###############################################
+### Grunt.gd 								###
+### handles grunt behaviour					###
+###############################################
 extends KinematicBody
 
 enum STATES { NONE, IDLE, PATROL, ATTACK }

@@ -1,5 +1,7 @@
-### shotgun.gd v.2 	###
-### GoDoM 			###
+#######################################
+### shotgun.gd 						###
+###									###
+#######################################
 extends Spatial
 
 # Node Cache
@@ -22,15 +24,15 @@ var ammo = 0
 enum STATES { NONE, EQUIP, IDLE, SHOOT, RELOADING, DE_EQUIP }
 var state setget set_state
 
+# State switcher
 func set_state(new_state):
 	if state == new_state:
 		print("Already in that state " + str(new_state) )
-		#return
 	elif new_state == STATES.SHOOT:
-		print("state_shoot")
+		#print("state_shoot")
 		fire()
 	elif new_state == STATES.IDLE:
-		print("state_Idle")
+		#print("state_Idle")
 		set_process(true)
 		anim.play("shotgun_idle")
 	elif new_state == STATES.DE_EQUIP:
@@ -76,7 +78,7 @@ func fire():
 		emit_signal("on_shoot")
 		drop_cases()
 	else:
-		print("no ammo")
+		#print("no ammo")
 		anim.play("no_ammo")
 		pass
 
@@ -102,6 +104,6 @@ func _ready():
 func _process(delta):
 	### Inputs ###
 	if Input.is_action_just_pressed("fire0") and state == IDLE:
-		print("fire!")
+		#print("fire!")
 		set_state( SHOOT )
 

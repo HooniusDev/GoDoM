@@ -1,4 +1,7 @@
-# FPS Minigun controller script for GoDoM v.2
+###############################################
+### Minigun.gd 								###
+### 										###
+###############################################
 
 extends Spatial
 
