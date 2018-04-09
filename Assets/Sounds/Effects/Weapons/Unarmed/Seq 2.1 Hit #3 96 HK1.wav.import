@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Seq 2.1 Hit #3 96 HK1.wav-9c08e259721522a77be90823c8132440.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Weapons/Unarmed/Seq 2.1 Hit #3 96 HK1.wav"
+source_md5="00178679d24170819261f83cb818d381"
+
+dest_files=[ "res://.import/Seq 2.1 Hit #3 96 HK1.wav-9c08e259721522a77be90823c8132440.sample" ]
+dest_md5="3614d3bebea96d3447fb58e5ccda7da5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

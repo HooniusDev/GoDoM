@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Grunt_Pain_Male_BB_10_SCREAM LIBRARY_BRFX-004.wav-f313d28bc9a8da3652bb62e9d9522739.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Characters/Grunt_Pain_Male_BB_10_SCREAM LIBRARY_BRFX-004.wav"
+source_md5="0e53780b6e02595c16259963f92c90ca"
+
+dest_files=[ "res://.import/Grunt_Pain_Male_BB_10_SCREAM LIBRARY_BRFX-004.wav-f313d28bc9a8da3652bb62e9d9522739.sample" ]
+dest_md5="3d69a5ab63d4d6f68427a3ff1ec10f65"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

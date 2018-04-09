@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FS Metal Soldier Walk N05.wav-87d1d828520f774f6c889309989a502b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Characters/Footsteps/FS Metal Soldier Walk N05.wav"
+source_md5="023f32ffeb0495a5f0bbc638061fc166"
+
+dest_files=[ "res://.import/FS Metal Soldier Walk N05.wav-87d1d828520f774f6c889309989a502b.sample" ]
+dest_md5="38c81eb58aa99fee3e245a51762ab4e7"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

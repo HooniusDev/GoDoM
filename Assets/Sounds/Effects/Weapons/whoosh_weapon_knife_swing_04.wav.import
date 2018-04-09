@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/whoosh_weapon_knife_swing_04.wav-cf27d0a233357ded0350cd64b2dea35d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Weapons/whoosh_weapon_knife_swing_04.wav"
+source_md5="fe2267e6555200e71f03b0b829074e98"
+
+dest_files=[ "res://.import/whoosh_weapon_knife_swing_04.wav-cf27d0a233357ded0350cd64b2dea35d.sample" ]
+dest_md5="a233c56a4829f4b6f9ad4b5f2cd01083"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

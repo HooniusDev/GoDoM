@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FOOTSTEP - Metal Plate Walk Barefoot Male - 2.wav-c40dc9e1661543858fcb91dd6ae7efe1.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Characters/Footsteps/FOOTSTEP - Metal Plate Walk Barefoot Male - 2.wav"
+source_md5="a4ca90a0b8f4a3eced2ef167f3c632dd"
+
+dest_files=[ "res://.import/FOOTSTEP - Metal Plate Walk Barefoot Male - 2.wav-c40dc9e1661543858fcb91dd6ae7efe1.sample" ]
+dest_md5="5b22ec6cdbda5cab51800cba8758a2c1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

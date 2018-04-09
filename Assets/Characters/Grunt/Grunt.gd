@@ -4,9 +4,11 @@
 ###############################################
 extends KinematicBody
 
+# State Variables
 enum STATES { NONE, IDLE, PATROL, ATTACK }
 var state  setget set_state
 
+# Nav
 var navigation
 
 var gravity = -9.8 * 3
@@ -16,8 +18,19 @@ const SPEED =6
 const ACCEL = 2
 const DEACCEL = 6
 
+export (float) var shoot_delay = .5
+
+export (float) var health = 30
+
+func take_damage(damage):
+	health -= damage
+	print( "Damaged!" )
+	if health < 0:
+		queue_free()
+
 func _ready():
 	navigation = get_node("/root/World/Level/Navigation")
+	$ShootTimer.connect("timeout", self, "_on_shoot_timer")
 	set_state(IDLE)
 
 func set_state(new_state):
@@ -30,14 +43,27 @@ func set_state(new_state):
 	if new_state == ATTACK:
 		print("attack!")
 		$AnimationPlayer.playback_speed = 2
-		$AnimationPlayer.play("Walk_cycle-loop")
+		$AnimationPlayer.play("walk_2-loop")
+		$ShootTimer.start()
 	state = new_state
+
+func _on_shoot_timer():
+	# Do we see player?
+	var player_pos = Player.player.transform.origin
+	var ray = $RayCast
+	ray.look_at(player_pos, Vector3(0,1,0))
+	ray.force_raycast_update()
+	if ray.is_colliding():
+		print("Player in sight, shooting!")
+	else:
+		print("Where is he?")
+
 
 func _physics_process(delta):
 	if state == IDLE:
 		var length = (global_transform.origin - Player.player.global_transform.origin).length()
 		var to_player = global_transform.origin - Player.player.global_transform.origin
-		if length < 10 and transform.basis.z.dot(to_player.normalized()) > .4 :
+		if length < 8 and transform.basis.z.dot(to_player.normalized()) > .4 :
 			set_state(ATTACK)
 	if state == ATTACK:
 		turn(delta)
@@ -56,3 +82,4 @@ func _process(delta):
 		set_state(ATTACK)
 	if Input.is_action_just_pressed("patrol_grunt"):
 		set_state(IDLE)
+

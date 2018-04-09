@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion_med_long_tail_01.wav-5c06ddd23fbe12cd613cc8d25728f91a.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Effects/Explosions/explosion_med_long_tail_01.wav"
+source_md5="6277f5b2f28db98c8335107c559831fa"
+
+dest_files=[ "res://.import/explosion_med_long_tail_01.wav-5c06ddd23fbe12cd613cc8d25728f91a.sample" ]
+dest_md5="a13b41d19c664b71a0862ff0c04292a5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
