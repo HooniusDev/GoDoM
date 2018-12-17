@@ -8,10 +8,7 @@ path.etc2="res://.import/128grid.png-c092a6729a3c3fb8fdc5de9349239efc.etc2.stex"
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/textures/dev/128grid.png"
-source_md5="e6478a3c2e96acb4a710fad508d99e25"
-
 dest_files=[ "res://.import/128grid.png-c092a6729a3c3fb8fdc5de9349239efc.s3tc.stex", "res://.import/128grid.png-c092a6729a3c3fb8fdc5de9349239efc.etc2.stex" ]
-dest_md5="d00fd55e2949f7092559e51ab701071f"
 
 [params]
 

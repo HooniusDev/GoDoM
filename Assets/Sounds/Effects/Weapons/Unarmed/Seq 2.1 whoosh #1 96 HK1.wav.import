@@ -7,10 +7,7 @@ path="res://.import/Seq 2.1 whoosh #1 96 HK1.wav-54b843085cf6d36e07ed7f8d0d0ac0d
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Weapons/Unarmed/Seq 2.1 whoosh #1 96 HK1.wav"
-source_md5="8c4135144f0803f2cb7d7c268eebddb6"
-
 dest_files=[ "res://.import/Seq 2.1 whoosh #1 96 HK1.wav-54b843085cf6d36e07ed7f8d0d0ac0da.sample" ]
-dest_md5="fa6264cbc40b9125595f5b58869b3676"
 
 [params]
 

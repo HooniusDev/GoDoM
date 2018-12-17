@@ -7,10 +7,7 @@ path="res://.import/bullet-casing-on-concrete-2.wav-55dcc14b27757be773142f676ac3
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Bullets/bullet-casing-on-concrete-2.wav"
-source_md5="9f186231d25d1f9d3b58ec16b4c7cfc7"
-
 dest_files=[ "res://.import/bullet-casing-on-concrete-2.wav-55dcc14b27757be773142f676ac35052.sample" ]
-dest_md5="4b60e99418dfe4548a447524b09bbddd"
 
 [params]
 

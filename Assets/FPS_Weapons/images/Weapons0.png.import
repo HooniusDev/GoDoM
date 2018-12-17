@@ -8,10 +8,7 @@ path.etc2="res://.import/Weapons0.png-54a549ea66295a02950d27e42e88e77b.etc2.stex
 [deps]
 
 source_file="res://Assets/FPS_Weapons/images/Weapons0.png"
-source_md5="aef504e4b86dc261aeee85535f5eba8f"
-
 dest_files=[ "res://.import/Weapons0.png-54a549ea66295a02950d27e42e88e77b.s3tc.stex", "res://.import/Weapons0.png-54a549ea66295a02950d27e42e88e77b.etc2.stex" ]
-dest_md5="b1d2e62b9b5f16f0b7e31b2ccb35b559"
 
 [params]
 

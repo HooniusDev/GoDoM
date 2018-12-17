@@ -8,9 +8,7 @@ path.etc2="res://.import/Weapons0.png-029f754bb7f7ae9eec90d7e01b5a1bfe.etc2.stex
 [deps]
 
 source_file="res://Assets/Characters/Grunt/Images/Weapons0.png"
-source_md5="aef504e4b86dc261aeee85535f5eba8f"
 dest_files=[ "res://.import/Weapons0.png-029f754bb7f7ae9eec90d7e01b5a1bfe.s3tc.stex", "res://.import/Weapons0.png-029f754bb7f7ae9eec90d7e01b5a1bfe.etc2.stex" ]
-dest_md5="a9447cf242cff9abd464b0fc541f8a14"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/whoosh_weapon_knife_swing_04.wav-cf27d0a233357ded0350cd64b2d
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Weapons/whoosh_weapon_knife_swing_04.wav"
-source_md5="fe2267e6555200e71f03b0b829074e98"
-
 dest_files=[ "res://.import/whoosh_weapon_knife_swing_04.wav-cf27d0a233357ded0350cd64b2dea35d.sample" ]
-dest_md5="a233c56a4829f4b6f9ad4b5f2cd01083"
 
 [params]
 

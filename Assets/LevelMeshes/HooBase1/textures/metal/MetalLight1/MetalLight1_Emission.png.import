@@ -8,10 +8,7 @@ path.etc2="res://.import/MetalLight1_Emission.png-87de9085eb2ce6aab519ad6712aee2
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/textures/metal/MetalLight1/MetalLight1_Emission.png"
-source_md5="349807c2ce9aaaff6d357163932a32c1"
-
 dest_files=[ "res://.import/MetalLight1_Emission.png-87de9085eb2ce6aab519ad6712aee245.s3tc.stex", "res://.import/MetalLight1_Emission.png-87de9085eb2ce6aab519ad6712aee245.etc2.stex" ]
-dest_md5="67f24fef1601b5c6e36b352a70ef35f3"
 
 [params]
 

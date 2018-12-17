@@ -8,10 +8,7 @@ path.etc2="res://.import/MetalTrim1_Roughness.png-af36f2ed2b8bea00c4ece046c2d802
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/textures/metal/MetalTrim1/MetalTrim1_Roughness.png"
-source_md5="43279f7c3fea76310501a5828eebc4c0"
-
 dest_files=[ "res://.import/MetalTrim1_Roughness.png-af36f2ed2b8bea00c4ece046c2d802a3.s3tc.stex", "res://.import/MetalTrim1_Roughness.png-af36f2ed2b8bea00c4ece046c2d802a3.etc2.stex" ]
-dest_md5="5d448b0d61e8d60425e105d4d3e6bd40"
 
 [params]
 

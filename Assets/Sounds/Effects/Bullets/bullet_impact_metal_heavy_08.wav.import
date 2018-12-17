@@ -7,10 +7,7 @@ path="res://.import/bullet_impact_metal_heavy_08.wav-bc04dfdc9f76e3c4ca732cd1559
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Bullets/bullet_impact_metal_heavy_08.wav"
-source_md5="22765cadea9dc4b997fae8bb4d2a4e58"
-
 dest_files=[ "res://.import/bullet_impact_metal_heavy_08.wav-bc04dfdc9f76e3c4ca732cd15590b090.sample" ]
-dest_md5="4b08e55c4b067218ffbf6d17670477af"
 
 [params]
 

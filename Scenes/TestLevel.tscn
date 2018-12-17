@@ -10,26 +10,22 @@
 [ext_resource path="res://Assets/LevelMeshes/TestLevel/rooms_nav.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Characters/Grunt/Grunt.tscn" type="PackedScene" id=9]
 
-[node name="World" type="Node" index="0"]
-
+[node name="World" type="Node"]
 script = ExtResource( 1 )
 
-[node name="HUD" parent="." index="0" instance=ExtResource( 2 )]
+[node name="HUD" parent="." instance=ExtResource( 2 )]
 
-[node name="Level" type="Node" parent="." index="1"]
+[node name="Level" type="Node" parent="."]
 
-[node name="Geometry" type="Node" parent="Level" index="0"]
-
+[node name="Geometry" type="Node" parent="Level"]
 editor/display_folded = true
 
-[node name="rooms" parent="Level/Geometry" index="0" instance=ExtResource( 3 )]
+[node name="rooms" parent="Level/Geometry" instance=ExtResource( 3 )]
 
-[node name="Lights" type="Node" parent="Level" index="1"]
-
+[node name="Lights" type="Node" parent="Level"]
 editor/display_folded = true
 
-[node name="DirectionalLight" type="DirectionalLight" parent="Level/Lights" index="0"]
-
+[node name="DirectionalLight" type="DirectionalLight" parent="Level/Lights"]
 transform = Transform( 0.701041, -0.641467, 0.311547, 0, 0.436878, 0.899521, -0.713121, -0.630601, 0.306269, -6.19201, 6.19083, 0 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
@@ -55,50 +51,43 @@ directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 
-[node name="Collectables" type="Node" parent="Level" index="2"]
-
+[node name="Collectables" type="Node" parent="Level"]
 editor/display_folded = true
 
-[node name="ShellBox" parent="Level/Collectables" index="0" instance=ExtResource( 4 )]
-
+[node name="ShellBox" parent="Level/Collectables" instance=ExtResource( 4 )]
 transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, -1.61349, 0.212917, -11.7371 )
 
-[node name="AmmoBox" parent="Level/Collectables" index="1" instance=ExtResource( 5 )]
-
+[node name="AmmoBox" parent="Level/Collectables" instance=ExtResource( 5 )]
 transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, -1.40819, 0.212917, -14.4136 )
 type = 0
 amount = 50
 
-[node name="Shotgun_Collect" parent="Level/Collectables" index="2" instance=ExtResource( 6 )]
-
+[node name="Shotgun_Collect" parent="Level/Collectables" instance=ExtResource( 6 )]
 transform = Transform( -0.0310742, 0, 0.69931, 0, 0.7, 0, -0.69931, 0, -0.0310742, 0.131214, 1.08089, -15.0705 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="MiniGun_Collect" parent="Level/Collectables" index="3" instance=ExtResource( 7 )]
-
+[node name="MiniGun_Collect" parent="Level/Collectables" instance=ExtResource( 7 )]
 transform = Transform( -0.050451, 0, 0.69818, 0, 0.7, 0, -0.69818, 0, -0.050451, -2.16919, 0.67277, -7.65044 )
 
-[node name="Navigation" type="Navigation" parent="Level" index="3"]
-
+[node name="Navigation" type="Navigation" parent="Level"]
 up_vector = Vector3( 0, 1, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="rooms_nav" parent="Level/Navigation" index="0" instance=ExtResource( 8 )]
-
+[node name="rooms_nav" parent="Level/Navigation" instance=ExtResource( 8 )]
 _sections_unfolded = [ "Transform" ]
 
-[node name="StartSpawn" type="Position3D" parent="." index="2"]
-
+[node name="StartSpawn" type="Position3D" parent="."]
 transform = Transform( -0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, -0.730652, -0.14082, -18.2387 )
 
-[node name="Grunt" parent="." index="3" instance=ExtResource( 9 )]
-
+[node name="Grunt" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78308, 0.189477, 15.116 )
-health = 30
+move_lock_x = false
+move_lock_y = false
+move_lock_z = false
 
-[node name="Grunt2" parent="." index="4" instance=ExtResource( 9 )]
-
+[node name="Grunt2" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.27658, 0.189477, 15.5824 )
-health = 30
-
+move_lock_x = false
+move_lock_y = false
+move_lock_z = false
 

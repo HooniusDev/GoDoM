@@ -45,26 +45,26 @@ func set_state(new_state):
 func on_anim_finished( anim_name ):
 	if anim_name == "unarmed_punch":
 		#print("shot finished")
-		set_state(IDLE)
-	if anim_name == "equip" and state == EQUIP:
+		set_state(STATES.IDLE)
+	if anim_name == "equip" and state == STATES.EQUIP:
 		#print("equipped and idling")
-		set_state(IDLE)
-	if anim_name == "equip" and state == DE_EQUIP:
-		set_state(NONE)
+		set_state(STATES.IDLE)
+	if anim_name == "equip" and state == STATES.DE_EQUIP:
+		set_state(STATES.NONE)
 
 func _process(delta):
 	### Inputs ###
-	if Input.is_action_just_pressed("fire0") and state == IDLE:
-		set_state( HIT )
+	if Input.is_action_just_pressed("fire0") and state == STATES.IDLE:
+		set_state( STATES.HIT )
 
 func _ready():
-	set_state(NONE)
+	set_state(STATES.NONE)
 	anim.connect("animation_finished",self, "on_anim_finished")
 
 # Function to equip
 func equip():
-	set_state(EQUIP)
+	set_state(STATES.EQUIP)
 
 # Function to de_equip
 func de_equip():
-	set_state(DE_EQUIP)
+	set_state(STATES.DE_EQUIP)

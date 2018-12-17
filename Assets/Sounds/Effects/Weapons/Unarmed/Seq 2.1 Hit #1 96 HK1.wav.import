@@ -7,10 +7,7 @@ path="res://.import/Seq 2.1 Hit #1 96 HK1.wav-19f6800c642a9d260aa77dc2efaf06f9.s
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Weapons/Unarmed/Seq 2.1 Hit #1 96 HK1.wav"
-source_md5="d4ac0b1a2b39c98affbedf33bd346a71"
-
 dest_files=[ "res://.import/Seq 2.1 Hit #1 96 HK1.wav-19f6800c642a9d260aa77dc2efaf06f9.sample" ]
-dest_md5="4fa05eb5202c38d75619485c8843079b"
 
 [params]
 

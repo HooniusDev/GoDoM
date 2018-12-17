@@ -41,11 +41,11 @@ export (float) var spooling_delay = 2
 
 # Function to equip
 func equip():
-	set_state(EQUIP)
+	set_state(STATES.EQUIP)
 
 # Function to de_equip
 func de_equip():
-	set_state(DE_EQUIP)
+	set_state(STATES.DE_EQUIP)
 
 # Shoot state process to see if should loop back
 func _process_shoot(delta):
@@ -55,7 +55,7 @@ func _process_shoot(delta):
 # Called from AnimationPlayer
 func fire():
 	# Spooling uses same animation so have to filter them
-	if state != SPOOL_UP and state != SPOOL_DOWN and ammo > 0:
+	if state != STATES.SPOOL_UP and state != STATES.SPOOL_DOWN and ammo > 0:
 		shoot_ray.shoot(damage, spread)
 		#create and send bullet case to world
 		var instance = bullet.instance()
@@ -76,7 +76,7 @@ func _process_spool_up(delta):
 	spool += delta
 	if spool>spooling_delay:
 		spool = spooling_delay
-		set_state(SHOOT)
+		set_state(STATES.SHOOT)
 		return
 	# lerp animation speed according to spool value
 	anim.playback_speed = lerp(0,barrel_full_rotation_speed, spool)
@@ -88,19 +88,19 @@ func _process_spool_down(delta):
 	if spool < 0:
 		spool = 0
 		anim.stop()
-		set_state(IDLE)
+		set_state(STATES.IDLE)
 		return
 	# lerp animation speed
 	anim.playback_speed = lerp(0,barrel_full_rotation_speed, spool)
 
 func on_anim_finished( anim_name ):
 	# De Equip anim done
-	if anim_name == "equip" and state == DE_EQUIP:
-		set_state(NONE)
-	if anim_name == "equip" and state == EQUIP:
-		set_state(IDLE)
+	if anim_name == "equip" and state == STATES.DE_EQUIP:
+		set_state(STATES.NONE)
+	if anim_name == "equip" and state == STATES.EQUIP:
+		set_state(STATES.IDLE)
 	if anim_name == "minigun_shoot":
-		set_state(IDLE)
+		set_state(STATES.IDLE)
 
 func set_state(new_state):
 	if state == new_state:
@@ -113,7 +113,7 @@ func set_state(new_state):
 		shoot_sound.play()
 	elif new_state == STATES.SHOOT:
 		if ammo <= 0:
-			set_state(SPOOL_DOWN)
+			set_state(STATES.SPOOL_DOWN)
 			return
 		anim.playback_speed = 4
 		flash.show()
@@ -124,12 +124,12 @@ func set_state(new_state):
 	elif new_state == STATES.IDLE:
 		set_process(true)
 	elif new_state == STATES.DE_EQUIP:
-		if state == SHOOT or state == SPOOL_UP:
+		if state == STATES.SHOOT or state == STATES.SPOOL_UP:
 			shoot_sound.play(6)
 			flash.hide()
 		anim.playback_speed = 2
 		# Hack to make it nicer when quickly changing weapons
-		if state == EQUIP:
+		if state == STATES.EQUIP:
 			anim.play_backwards("equip", .7 )
 		else:
 			anim.play_backwards("equip")
@@ -149,12 +149,12 @@ func set_state(new_state):
 #
 func _process(delta):
 	# while equipping dont start shooting
-	if state != EQUIP and state != DE_EQUIP:
+	if state != STATES.EQUIP and state != STATES.DE_EQUIP:
 		### Inputs ###
-		if Input.is_action_pressed("fire0") and not state == SHOOT and ammo > 0:
-			set_state(SPOOL_UP)
+		if Input.is_action_pressed("fire0") and not state == STATES.SHOOT and ammo > 0:
+			set_state(STATES.SPOOL_UP)
 		if Input.is_action_just_released("fire0"):
-			set_state(SPOOL_DOWN)
+			set_state(STATES.SPOOL_DOWN)
 	### Process States ###
 	if state == STATES.SPOOL_UP:
 		_process_spool_up(delta)
@@ -165,10 +165,10 @@ func _process(delta):
 			_process_shoot(delta)
 		else:
 			flash.hide()
-			set_state(SPOOL_UP)
+			set_state(STATES.SPOOL_UP)
 
 func _ready():
-	set_state(NONE)
+	set_state(STATES.NONE)
 	anim.connect("animation_finished",self, "on_anim_finished")
 
 func _notification(what):

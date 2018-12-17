@@ -7,10 +7,7 @@ path="res://.import/FOOTSTEP - Metal Plate Walk Barefoot Male - 1.wav-7c5fdc182a
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Characters/Footsteps/FOOTSTEP - Metal Plate Walk Barefoot Male - 1.wav"
-source_md5="ec71aea8bdc81ef64bab58a386492e60"
-
 dest_files=[ "res://.import/FOOTSTEP - Metal Plate Walk Barefoot Male - 1.wav-7c5fdc182a54a56de9853fa22c144640.sample" ]
-dest_md5="5fe0b2c7a2c920e8c76a8454cce4d537"
 
 [params]
 

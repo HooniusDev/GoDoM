@@ -8,10 +8,7 @@ path.etc2="res://.import/MetalStair1_Diffuse.png-9b5547c2bc8e01f436dedbfab19aa2c
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/textures/metal/MetalStair1/MetalStair1_Diffuse.png"
-source_md5="dadcf0a57ef51b1fed2ad3ae30761ca3"
-
 dest_files=[ "res://.import/MetalStair1_Diffuse.png-9b5547c2bc8e01f436dedbfab19aa2cc.s3tc.stex", "res://.import/MetalStair1_Diffuse.png-9b5547c2bc8e01f436dedbfab19aa2cc.etc2.stex" ]
-dest_md5="77a638eb8b1c2c4f3f065a62ce12b64c"
 
 [params]
 

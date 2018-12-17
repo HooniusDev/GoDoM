@@ -7,10 +7,7 @@ path="res://.import/416839__alineaudio__grunt1-death-pain.wav-2638be1e5e31033a10
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Characters/416839__alineaudio__grunt1-death-pain.wav"
-source_md5="868572204595931178225bab1615beae"
-
 dest_files=[ "res://.import/416839__alineaudio__grunt1-death-pain.wav-2638be1e5e31033a10d2474bebe9d63c.sample" ]
-dest_md5="d802a2d907ad5557dcaf247eaf52d652"
 
 [params]
 

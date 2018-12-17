@@ -8,10 +8,7 @@ path.etc2="res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.etc2.
 [deps]
 
 source_file="res://Assets/Images/MuzzleFlashes/MuzzleFlash0.tga"
-source_md5="5986a622e5739f87120eeff22776aade"
-
 dest_files=[ "res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.s3tc.stex", "res://.import/MuzzleFlash0.tga-c425058dfb7beba298656119b0e84138.etc2.stex" ]
-dest_md5="655e5f769810ab09ed6e261c67f2d8c6"
 
 [params]
 

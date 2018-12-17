@@ -7,10 +7,7 @@ path="res://.import/shotgun.dae-8179d59c7f63273293cfd590d8b57062.scn"
 [deps]
 
 source_file="res://Assets/PropMeshes/shotgun.dae"
-source_md5="8340e484ddc916c1f20a8b7677793608"
-
 dest_files=[ "res://.import/shotgun.dae-8179d59c7f63273293cfd590d8b57062.scn" ]
-dest_md5="4de8f7116db57a5177b7d8c7eebd90ac"
 
 [params]
 

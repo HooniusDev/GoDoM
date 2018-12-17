@@ -54,17 +54,17 @@ func set_state(new_state):
 # TODO make animation with no ammo, gun held open or something
 func should_reload():
 	if ammo <= 0:
-		set_state(IDLE)
+		set_state(STATES.IDLE)
 
 # Change state when animation finishes
 func on_anim_finished( anim_name ):
 	if anim_name == "Shotgun_shoot" or anim_name == "no_ammo":
-		set_state(IDLE)
+		set_state(STATES.IDLE)
 		#flash.hide()
-	if anim_name == "shotgun_equip" and state == EQUIP:
-		set_state(IDLE)
-	if anim_name == "shotgun_equip" and state == DE_EQUIP:
-		set_state(NONE)
+	if anim_name == "shotgun_equip" and state == STATES.EQUIP:
+		set_state(STATES.IDLE)
+	if anim_name == "shotgun_equip" and state == STATES.DE_EQUIP:
+		set_state(STATES.NONE)
 
 func fire():
 	if ammo > 0:
@@ -90,20 +90,20 @@ func drop_cases():
 
 # Function to equip
 func equip():
-	set_state(EQUIP)
+	set_state(STATES.EQUIP)
 
 # Function to de_equip
 func de_equip():
-	set_state(DE_EQUIP)
+	set_state(STATES.DE_EQUIP)
 
 
 func _ready():
-	set_state(NONE)
+	set_state(STATES.NONE)
 	anim.connect("animation_finished",self, "on_anim_finished")
 
 func _process(delta):
 	### Inputs ###
-	if Input.is_action_just_pressed("fire0") and state == IDLE:
+	if Input.is_action_just_pressed("fire0") and state == STATES.IDLE:
 		#print("fire!")
-		set_state( SHOOT )
+		set_state( STATES.SHOOT )
 

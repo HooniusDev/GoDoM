@@ -8,9 +8,7 @@ path.etc2="res://.import/Diffuse_green.png-c3192768edf993011f6179c17a335acb.etc2
 [deps]
 
 source_file="res://Assets/Characters/Grunt/Images/Diffuse_green.png"
-source_md5="281d8a21224c2a8fd832ac37b4df76f6"
 dest_files=[ "res://.import/Diffuse_green.png-c3192768edf993011f6179c17a335acb.s3tc.stex", "res://.import/Diffuse_green.png-c3192768edf993011f6179c17a335acb.etc2.stex" ]
-dest_md5="d0a62539857928dd14b308956fb73629"
 
 [params]
 

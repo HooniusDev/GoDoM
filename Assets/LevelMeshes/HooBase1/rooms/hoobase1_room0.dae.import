@@ -7,10 +7,7 @@ path="res://.import/hoobase1_room0.dae-eeabbe617eeca01a44c0e37eec7b6ef5.scn"
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/rooms/hoobase1_room0.dae"
-source_md5="15c548c5613a2239884ef7048c7b15a2"
-
 dest_files=[ "res://.import/hoobase1_room0.dae-eeabbe617eeca01a44c0e37eec7b6ef5.scn" ]
-dest_md5="6ef5d78e2fd7940a4746bc2d2f71fa98"
 
 [params]
 

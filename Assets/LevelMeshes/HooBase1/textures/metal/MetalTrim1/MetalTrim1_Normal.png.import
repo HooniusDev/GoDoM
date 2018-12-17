@@ -8,10 +8,7 @@ path.etc2="res://.import/MetalTrim1_Normal.png-ab3cd3fccf2824dec601003f83c1ae18.
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/textures/metal/MetalTrim1/MetalTrim1_Normal.png"
-source_md5="f8b5f2cde0b72df19e2c4ff646765f78"
-
 dest_files=[ "res://.import/MetalTrim1_Normal.png-ab3cd3fccf2824dec601003f83c1ae18.s3tc.stex", "res://.import/MetalTrim1_Normal.png-ab3cd3fccf2824dec601003f83c1ae18.etc2.stex" ]
-dest_md5="eebca89bd3016439da3bdfad46865d31"
 
 [params]
 

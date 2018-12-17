@@ -7,10 +7,7 @@ path="res://.import/1806 - Footsteps - Sneakers on Carpet - 90 fpm - Loop.wav-c9
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Characters/Footsteps/1806 - Footsteps - Sneakers on Carpet - 90 fpm - Loop.wav"
-source_md5="7d13b0f22f02916ce94532d6e311cb74"
-
 dest_files=[ "res://.import/1806 - Footsteps - Sneakers on Carpet - 90 fpm - Loop.wav-c9b162a09dfe58ddcbfb4c82bce380ff.sample" ]
-dest_md5="db249f6163330b8de1712bf15d3aacc2"
 
 [params]
 

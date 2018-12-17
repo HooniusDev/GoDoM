@@ -49,7 +49,7 @@ func update_hud():
 	emit_signal("player_stats_changed")
 
 func _process(delta):
-	if not state == EQUIPPING:
+	if not state == states.EQUIPPING:
 		if Input.is_action_just_pressed("equip_minigun"):
 			if has_minigun:
 				set_current_weapon(player.minigun)
@@ -76,21 +76,21 @@ func set_current_weapon( weapon ):
 
 
 func collect_item(item):
-	if item.type == AMMO:
+	if item.type == ITEM_TYPES.AMMO:
 		#print("ammo receiced")
 		player.minigun.ammo += item.amount
-	elif item.type == SHELL:
+	elif item.type == ITEM_TYPES.SHELL:
 		#print("shells receiced")
 		player.shotgun.ammo += item.amount
-	elif item.type == HEALTH:
+	elif item.type == ITEM_TYPES.HEALTH:
 		#print("health receiced")
 		player.health += item.amount
-	elif item.type == MINIGUN:
+	elif item.type == ITEM_TYPES.MINIGUN:
 		#print("MINIGUN AND AMMO("+str(item.amount)+")" )
 		has_minigun = true
 		player.minigun.ammo += item.amount
 		set_current_weapon(player.minigun)
-	elif item.type == SHOTGUN:
+	elif item.type == ITEM_TYPES.SHOTGUN:
 		#print("SHOTGUN AND AMMO("+str(item.amount)+")" )
 		player.shotgun.ammo += item.amount
 		has_shotgun = true

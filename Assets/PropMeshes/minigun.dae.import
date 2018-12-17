@@ -7,10 +7,7 @@ path="res://.import/minigun.dae-67ff48f23a35f7ca01200ed54863278b.scn"
 [deps]
 
 source_file="res://Assets/PropMeshes/minigun.dae"
-source_md5="fcdd8c2690396c1c605ad9ba2ab7f3c0"
-
 dest_files=[ "res://.import/minigun.dae-67ff48f23a35f7ca01200ed54863278b.scn" ]
-dest_md5="fd79e043da2c5f56caeb78c6453ae774"
 
 [params]
 

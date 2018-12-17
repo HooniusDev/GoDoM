@@ -7,10 +7,7 @@ path="res://.import/foley_object_grab_pickup_04.wav-c5edc56873792411c6e3e21ea415
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Characters/foley_object_grab_pickup_04.wav"
-source_md5="e70ab11482e2eecbbecff2e752ddd2ed"
-
 dest_files=[ "res://.import/foley_object_grab_pickup_04.wav-c5edc56873792411c6e3e21ea4155967.sample" ]
-dest_md5="64ee7a5e625e25badee8f262d7090395"
 
 [params]
 

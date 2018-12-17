@@ -8,10 +8,7 @@ path.etc2="res://.import/side_m_4.png-938334b1f4009feeb63f5fb37beaabe2.etc2.stex
 [deps]
 
 source_file="res://Assets/Images/MuzzleFlashes/side_m_4.png"
-source_md5="e1a9fa1e4c318e95338b5201dcd9ea9e"
-
 dest_files=[ "res://.import/side_m_4.png-938334b1f4009feeb63f5fb37beaabe2.s3tc.stex", "res://.import/side_m_4.png-938334b1f4009feeb63f5fb37beaabe2.etc2.stex" ]
-dest_md5="e87418b0cea86f23d3f883d88a4b7b9d"
 
 [params]
 

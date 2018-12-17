@@ -7,10 +7,7 @@ path="res://.import/explosion_large_no_tail_03.wav-a686027dcefbd2ed0838e248666a1
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Explosions/explosion_large_no_tail_03.wav"
-source_md5="781df572c659cefb3efbfdadb7d65fe6"
-
 dest_files=[ "res://.import/explosion_large_no_tail_03.wav-a686027dcefbd2ed0838e248666a1689.sample" ]
-dest_md5="0e555c55465aca764c4aed3cd4007d8d"
 
 [params]
 

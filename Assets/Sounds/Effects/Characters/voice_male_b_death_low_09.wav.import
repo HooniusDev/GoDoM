@@ -7,10 +7,7 @@ path="res://.import/voice_male_b_death_low_09.wav-c5786271cf611896b937e7280400de
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Characters/voice_male_b_death_low_09.wav"
-source_md5="1fefa7a37647656af3d7dac74a8bc40c"
-
 dest_files=[ "res://.import/voice_male_b_death_low_09.wav-c5786271cf611896b937e7280400de71.sample" ]
-dest_md5="0f439bc5b656ef6f3a106e541cdeeee0"
 
 [params]
 

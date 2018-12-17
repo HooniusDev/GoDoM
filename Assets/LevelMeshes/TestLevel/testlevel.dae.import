@@ -7,10 +7,7 @@ path="res://.import/testlevel.dae-f8e92dbcc24d773362b8a1b33dc04b23.scn"
 [deps]
 
 source_file="res://Assets/LevelMeshes/TestLevel/testlevel.dae"
-source_md5="8f13cdaeb20c879c0bc04ebfc70ad696"
-
 dest_files=[ "res://.import/testlevel.dae-f8e92dbcc24d773362b8a1b33dc04b23.scn" ]
-dest_md5="4ff3f5df546a1d4c4d9d4b3e6e44bb56"
 
 [params]
 

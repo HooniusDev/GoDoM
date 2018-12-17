@@ -7,10 +7,7 @@ path="res://.import/explosion_large_07.wav-0d2911fcc9533b7794cb2d85004f206e.samp
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Explosions/explosion_large_07.wav"
-source_md5="245e0bb72389fb890ee3217d4adc58ab"
-
 dest_files=[ "res://.import/explosion_large_07.wav-0d2911fcc9533b7794cb2d85004f206e.sample" ]
-dest_md5="6684bb87b9357765729f96b778c6e39d"
 
 [params]
 

@@ -8,10 +8,7 @@ path.etc2="res://.import/grunt_C.png-dc616f3a19098bb4872e85aa46bad91c.etc2.stex"
 [deps]
 
 source_file="res://Assets/Characters/Grunt/Images/grunt_C.png"
-source_md5="7c8ccaaa8aa35e22d1f4784aab8b5eba"
-
 dest_files=[ "res://.import/grunt_C.png-dc616f3a19098bb4872e85aa46bad91c.s3tc.stex", "res://.import/grunt_C.png-dc616f3a19098bb4872e85aa46bad91c.etc2.stex" ]
-dest_md5="4564ce2c931132c1e365d70be25a4bac"
 
 [params]
 

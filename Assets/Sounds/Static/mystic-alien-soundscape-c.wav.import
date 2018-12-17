@@ -7,10 +7,7 @@ path="res://.import/mystic-alien-soundscape-c.wav-037eaf53262404ea55c3ff7ae34e3a
 [deps]
 
 source_file="res://Assets/Sounds/Static/mystic-alien-soundscape-c.wav"
-source_md5="23b0dda56efb35fa5c483902b74e8458"
-
 dest_files=[ "res://.import/mystic-alien-soundscape-c.wav-037eaf53262404ea55c3ff7ae34e3a59.sample" ]
-dest_md5="dd297d25b68869da15e51f96f18fb26f"
 
 [params]
 

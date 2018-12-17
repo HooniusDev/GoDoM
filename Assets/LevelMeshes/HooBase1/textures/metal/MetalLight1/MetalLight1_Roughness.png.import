@@ -8,10 +8,7 @@ path.etc2="res://.import/MetalLight1_Roughness.png-6f923183d48c6d74f918e68db13bf
 [deps]
 
 source_file="res://Assets/LevelMeshes/HooBase1/textures/metal/MetalLight1/MetalLight1_Roughness.png"
-source_md5="3181cc3d73477445e8ca750d12b3accd"
-
 dest_files=[ "res://.import/MetalLight1_Roughness.png-6f923183d48c6d74f918e68db13bfd13.s3tc.stex", "res://.import/MetalLight1_Roughness.png-6f923183d48c6d74f918e68db13bfd13.etc2.stex" ]
-dest_md5="9f44277ad2213f5347d69a73cf86317b"
 
 [params]
 

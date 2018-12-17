@@ -7,10 +7,7 @@ path="res://.import/grunt.dae-238ac9f437fb9de36a6fbdf68e44c006.scn"
 [deps]
 
 source_file="res://Assets/Characters/Grunt/grunt.dae"
-source_md5="f46fd6eb082e09386be1dc955037f41d"
-
 dest_files=[ "res://.import/grunt.dae-238ac9f437fb9de36a6fbdf68e44c006.scn" ]
-dest_md5="a79f8960db289acd50bf7eff8ead5992"
 
 [params]
 

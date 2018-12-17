@@ -7,10 +7,7 @@ path="res://.import/bullet_shell_bounce_wood2_05.wav-4c2529837bdbf792b4878b68af7
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Bullets/bullet_shell_bounce_wood2_05.wav"
-source_md5="62f206f5da7729113480e556a122f610"
-
 dest_files=[ "res://.import/bullet_shell_bounce_wood2_05.wav-4c2529837bdbf792b4878b68af72cbe8.sample" ]
-dest_md5="015f47208aba966d885951041652a7e5"
 
 [params]
 

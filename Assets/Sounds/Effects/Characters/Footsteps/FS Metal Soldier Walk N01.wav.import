@@ -7,10 +7,7 @@ path="res://.import/FS Metal Soldier Walk N01.wav-53de8c56a903ea5fab9d4b1069accf
 [deps]
 
 source_file="res://Assets/Sounds/Effects/Characters/Footsteps/FS Metal Soldier Walk N01.wav"
-source_md5="40b6be81ab2ee2c68a599a730ce915ae"
-
 dest_files=[ "res://.import/FS Metal Soldier Walk N01.wav-53de8c56a903ea5fab9d4b1069accf24.sample" ]
-dest_md5="e29a3896ae010c8cc92ddfe910ff69ff"
 
 [params]
 
