@@ -66,7 +66,31 @@ stretch = true
 stretch_shrink = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
 
-[node name="HealthLabel" type="Label" parent="Info" index="0"]
+[node name="HelloLabel" type="Label" parent="Info" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = 10.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = "Hello"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction" ]
+
+[node name="HealthLabel" type="Label" parent="Info" index="1"]
 
 anchor_left = 0.9
 anchor_top = 0.9
@@ -89,7 +113,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Grow Direction" ]
 
-[node name="AmmoLabel" type="Label" parent="Info" index="1"]
+[node name="AmmoLabel" type="Label" parent="Info" index="2"]
 
 anchor_left = 0.9
 anchor_top = 0.9
@@ -114,7 +138,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Grow Direction", "Rect" ]
 
-[node name="PauseMenu" parent="." index="2" instance=ExtResource( 4 )]
+[node name="PauseMenu" parent="." index="3" instance=ExtResource( 4 )]
 
 visible = false
 
